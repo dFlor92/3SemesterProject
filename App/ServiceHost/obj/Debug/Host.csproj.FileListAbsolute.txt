@@ -1,0 +1,17 @@
+C:\Users\Anonymous\source\repos\Project\ServiceHost\obj\Debug\Host.csprojResolveAssemblyReference.cache
+C:\Users\Anonymous\source\repos\Project\ServiceHost\obj\Debug\Host.csproj.CoreCompileInputs.cache
+C:\Users\Anonymous\source\repos\Project\ServiceHost\bin\Debug\ServiceHost.exe.config
+C:\Users\Anonymous\source\repos\Project\ServiceHost\bin\Debug\ServiceHost.exe
+C:\Users\Anonymous\source\repos\Project\ServiceHost\bin\Debug\ServiceHost.pdb
+C:\Users\Anonymous\source\repos\Project\ServiceHost\bin\Debug\NobiService.dll
+C:\Users\Anonymous\source\repos\Project\ServiceHost\bin\Debug\Core.dll
+C:\Users\Anonymous\source\repos\Project\ServiceHost\bin\Debug\NobiService.pdb
+C:\Users\Anonymous\source\repos\Project\ServiceHost\bin\Debug\Core.pdb
+C:\Users\Anonymous\source\repos\Project\ServiceHost\obj\Debug\ServiceHost.exe
+C:\Users\Anonymous\source\repos\Project\ServiceHost\obj\Debug\ServiceHost.pdb
+C:\Users\Anonymous\source\repos\Project\ServiceHost\bin\Debug\DataAccesLayer.dll
+C:\Users\Anonymous\source\repos\Project\ServiceHost\bin\Debug\BusinessLogic.dll
+C:\Users\Anonymous\source\repos\Project\ServiceHost\bin\Debug\DataAccesLayer.pdb
+C:\Users\Anonymous\source\repos\Project\ServiceHost\bin\Debug\BusinessLogic.pdb
+C:\Users\Anonymous\source\repos\Project\ServiceHost\bin\Debug\ServiceHost.exe.CodeAnalysisLog.xml
+C:\Users\Anonymous\source\repos\Project\ServiceHost\bin\Debug\ServiceHost.exe.lastcodeanalysissucceeded

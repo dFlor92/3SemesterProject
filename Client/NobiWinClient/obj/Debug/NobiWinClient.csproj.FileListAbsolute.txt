@@ -1,0 +1,20 @@
+C:\Users\Anonymous\source\repos\NobiWinClient\NobiWinClient\bin\Debug\NobiWinClient.exe.config
+C:\Users\Anonymous\source\repos\NobiWinClient\NobiWinClient\bin\Debug\NobiWinClient.exe
+C:\Users\Anonymous\source\repos\NobiWinClient\NobiWinClient\bin\Debug\NobiWinClient.pdb
+C:\Users\Anonymous\source\repos\NobiWinClient\NobiWinClient\obj\Debug\NobiWinClient.csprojResolveAssemblyReference.cache
+C:\Users\Anonymous\source\repos\NobiWinClient\NobiWinClient\obj\Debug\NobiWinClient.Form1.resources
+C:\Users\Anonymous\source\repos\NobiWinClient\NobiWinClient\obj\Debug\NobiWinClient.Properties.Resources.resources
+C:\Users\Anonymous\source\repos\NobiWinClient\NobiWinClient\obj\Debug\NobiWinClient.csproj.GenerateResource.Cache
+C:\Users\Anonymous\source\repos\NobiWinClient\NobiWinClient\obj\Debug\NobiWinClient.csproj.CoreCompileInputs.cache
+C:\Users\Anonymous\source\repos\NobiWinClient\NobiWinClient\obj\Debug\NobiWinClient.exe
+C:\Users\Anonymous\source\repos\NobiWinClient\NobiWinClient\obj\Debug\NobiWinClient.pdb
+C:\Users\Anonymous\source\repos\3 Semester Project\NobiWinClient\NobiWinClient\bin\Debug\NobiWinClient.exe.config
+C:\Users\Anonymous\source\repos\3 Semester Project\NobiWinClient\NobiWinClient\bin\Debug\NobiWinClient.exe
+C:\Users\Anonymous\source\repos\3 Semester Project\NobiWinClient\NobiWinClient\bin\Debug\NobiWinClient.pdb
+C:\Users\Anonymous\source\repos\3 Semester Project\NobiWinClient\NobiWinClient\obj\Debug\NobiWinClient.csprojResolveAssemblyReference.cache
+C:\Users\Anonymous\source\repos\3 Semester Project\NobiWinClient\NobiWinClient\obj\Debug\NobiWinClient.Form1.resources
+C:\Users\Anonymous\source\repos\3 Semester Project\NobiWinClient\NobiWinClient\obj\Debug\NobiWinClient.Properties.Resources.resources
+C:\Users\Anonymous\source\repos\3 Semester Project\NobiWinClient\NobiWinClient\obj\Debug\NobiWinClient.csproj.GenerateResource.Cache
+C:\Users\Anonymous\source\repos\3 Semester Project\NobiWinClient\NobiWinClient\obj\Debug\NobiWinClient.csproj.CoreCompileInputs.cache
+C:\Users\Anonymous\source\repos\3 Semester Project\NobiWinClient\NobiWinClient\obj\Debug\NobiWinClient.exe
+C:\Users\Anonymous\source\repos\3 Semester Project\NobiWinClient\NobiWinClient\obj\Debug\NobiWinClient.pdb
