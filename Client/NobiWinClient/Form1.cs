@@ -28,8 +28,8 @@ namespace NobiWinClient
             ServiceClient client = new ServiceClient();
             Shift shift = new Shift
             {
-                Start = start_picker.Value,
-                End = end_picker.Value
+                shiftStart = start_picker.Value,
+                shiftEnd = end_picker.Value
             };
             client.Create(shift);
         }
