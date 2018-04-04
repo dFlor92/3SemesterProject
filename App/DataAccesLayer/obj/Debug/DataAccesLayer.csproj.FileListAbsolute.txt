@@ -8,3 +8,11 @@ C:\Users\Anonymous\source\repos\Project\DataAccesLayer\obj\Debug\DataAccesLayer.
 C:\Users\Anonymous\source\repos\Project\DataAccesLayer\obj\Debug\DataAccesLayer.pdb
 C:\Users\Anonymous\source\repos\Project\DataAccesLayer\bin\Debug\DataAccesLayer.dll.CodeAnalysisLog.xml
 C:\Users\Anonymous\source\repos\Project\DataAccesLayer\bin\Debug\DataAccesLayer.dll.lastcodeanalysissucceeded
+C:\Users\Daniel\Source\Repos\3SemesterProject\App\DataAccesLayer\bin\Debug\DataAccesLayer.dll
+C:\Users\Daniel\Source\Repos\3SemesterProject\App\DataAccesLayer\bin\Debug\DataAccesLayer.pdb
+C:\Users\Daniel\Source\Repos\3SemesterProject\App\DataAccesLayer\bin\Debug\Core.dll
+C:\Users\Daniel\Source\Repos\3SemesterProject\App\DataAccesLayer\bin\Debug\Core.pdb
+C:\Users\Daniel\Source\Repos\3SemesterProject\App\DataAccesLayer\obj\Debug\DataAccesLayer.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Source\Repos\3SemesterProject\App\DataAccesLayer\obj\Debug\DataAccesLayer.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Source\Repos\3SemesterProject\App\DataAccesLayer\obj\Debug\DataAccesLayer.dll
+C:\Users\Daniel\Source\Repos\3SemesterProject\App\DataAccesLayer\obj\Debug\DataAccesLayer.pdb

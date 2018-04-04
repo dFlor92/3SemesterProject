@@ -6,22 +6,21 @@ using System.Threading.Tasks;
 
 namespace Core
 {
-    public class Employee : Person
+    public class Admin : Person
     {
-
-        public Employee()
+        public Admin()
         {
-            
+
         }
-        public Employee(int id)
+        public Admin(int id)
         {
             this.Id = id;
         }
-        public Employee(int id, string name, string email)
+        public Admin(int id, string name, string email)
         {
             this.Id = id;
             this.Name = name;
-            this.Email = Email;
+            this.Email = email;
         }
     }
 }

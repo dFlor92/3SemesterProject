@@ -20,7 +20,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "INSERT INTO Shift (Start, Slut) VALUES (@start, @end)";
+                    cmd.CommandText = "INSERT INTO Shift (shiftStart, shiftEnd) VALUES (@start, @end)";
                     cmd.Parameters.AddWithValue("@start", entity.Start);
                     cmd.Parameters.AddWithValue("@end", entity.End);
                     cmd.ExecuteNonQuery();
@@ -35,7 +35,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "DELETE FROM Shift WHERE Id = @id";
+                    cmd.CommandText = "DELETE FROM Shift WHERE id = @id";
                     cmd.Parameters.AddWithValue("@id", id);
                     cmd.ExecuteNonQuery();
                 }
@@ -51,7 +51,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM Shift WHERE Id = @id";
+                    cmd.CommandText = "SELECT * FROM Shift WHERE id = @id";
                     cmd.Parameters.AddWithValue("@id", id);
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
@@ -78,7 +78,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "UPDATE Shift SET(Start = @start, End = @end, EmployeeId = @employeeId) WHERE Id = @id";
+                    cmd.CommandText = "UPDATE Shift SET(shiftStart = @start, shiftEnd = @end, employeeId = @employeeId) WHERE id = @id";
                     cmd.Parameters.AddWithValue("@start", entity.Start);
                     cmd.Parameters.AddWithValue("@end", entity.End);
                     cmd.Parameters.AddWithValue("@employeeId", entity.Employee.Id);
