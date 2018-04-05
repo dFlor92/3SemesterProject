@@ -1,15 +1,16 @@
 ﻿using System;
 
 
-enum Status { Accepted, Delayed, Cancelled, Scheduled, Completed };
-
-public class Meeting
+namespace Core
+    {
+    
+    public class Meeting
 {
     public DateTime Date { get; set; }
     public string Type { get; set; }
-    public readonly Status status;
+    public enum Status { Accepted, Delayed, Cancelled, Scheduled, Completed };
 
-	public Meeting(DateTime date, string type, Status status)
+        public Meeting(DateTime date, string type, Status status)
 	{
         this.Date = date;
         this.Type = type;
@@ -20,9 +21,8 @@ public class Meeting
     {
         this.Date = date;
         this.Type = type;
-        this.Status = status;
        
     }
 
-
+}
 }

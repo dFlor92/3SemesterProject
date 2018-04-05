@@ -42,8 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.cs" />
+    <Compile Include="Agent.cs" />
+    <Compile Include="Campaign.cs" />
+    <Compile Include="Lead.cs" />
+    <Compile Include="Meeting.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="Session.cs" />
     <Compile Include="Shift.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

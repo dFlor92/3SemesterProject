@@ -20,3 +20,4 @@ C:\Users\Daniel\Source\Repos\3SemesterProject\App\BusinessLogic\obj\Debug\Busine
 C:\Users\Daniel\Source\Repos\3SemesterProject\App\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
 C:\Users\Daniel\Source\Repos\3SemesterProject\App\BusinessLogic\obj\Debug\BusinessLogic.dll
 C:\Users\Daniel\Source\Repos\3SemesterProject\App\BusinessLogic\obj\Debug\BusinessLogic.pdb
+C:\Users\Daniel\Source\Repos\3SemesterProject\App\BusinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete

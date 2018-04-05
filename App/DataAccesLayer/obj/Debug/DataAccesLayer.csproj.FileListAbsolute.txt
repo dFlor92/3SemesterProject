@@ -16,3 +16,4 @@ C:\Users\Daniel\Source\Repos\3SemesterProject\App\DataAccesLayer\obj\Debug\DataA
 C:\Users\Daniel\Source\Repos\3SemesterProject\App\DataAccesLayer\obj\Debug\DataAccesLayer.csproj.CoreCompileInputs.cache
 C:\Users\Daniel\Source\Repos\3SemesterProject\App\DataAccesLayer\obj\Debug\DataAccesLayer.dll
 C:\Users\Daniel\Source\Repos\3SemesterProject\App\DataAccesLayer\obj\Debug\DataAccesLayer.pdb
+C:\Users\Daniel\Source\Repos\3SemesterProject\App\DataAccesLayer\obj\Debug\DataAccesLayer.csproj.CopyComplete

@@ -30,3 +30,4 @@ C:\Users\Daniel\Source\Repos\3SemesterProject\App\ServiceHost\obj\Debug\Host.csp
 C:\Users\Daniel\Source\Repos\3SemesterProject\App\ServiceHost\obj\Debug\Host.csproj.CoreCompileInputs.cache
 C:\Users\Daniel\Source\Repos\3SemesterProject\App\ServiceHost\obj\Debug\ServiceHost.exe
 C:\Users\Daniel\Source\Repos\3SemesterProject\App\ServiceHost\obj\Debug\ServiceHost.pdb
+C:\Users\Daniel\Source\Repos\3SemesterProject\App\ServiceHost\obj\Debug\Host.csproj.CopyComplete

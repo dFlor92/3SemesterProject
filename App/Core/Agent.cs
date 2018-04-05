@@ -1,23 +1,24 @@
 ﻿using System;
 
-public class Agent
+namespace Core
 {
-    public string Name { get; set; }
-    public int Telephone { get; set; }
-    public string Email { get; set; }
-
-
-	public Agent(string name, int telephone, string email)
-	{
-        this.Name = name;
-        this.Telephone = telephone;
-        this.Email = email;
-	}
-
-    public Agent(string name, int telephone, string email, Campaign campaign)
+    public class Agent : Person
     {
-        this.Name = name;
-        this.Telephone = telephone;
-        this.Email = email;
+        public int Phone { get; set; }
+        public Agent(string name, int id, string email, int phone)
+        {
+            this.Name = name;
+            this.Id = id;
+            this.Email = email;
+            this.Phone = phone;
+        }
+
+        public Agent(string name, int id, string email, Campaign campaign)
+        {
+            this.Name = name;
+            this.Id = id;
+            this.Email = email;
+            this.Phone = Phone;
+        }
     }
 }
