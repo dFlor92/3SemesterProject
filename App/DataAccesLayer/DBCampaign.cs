@@ -9,20 +9,20 @@ using System.Threading.Tasks;
 
 namespace DataAccesLayer
 {
-    public class DBShift : ICRUD<Shift>
+    public class DBCampaign : ICRUD<Campaign>
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["MSSQL"].ConnectionString;
 
-        public void Create(Shift entity)
+        public void Create(Campaign entity)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "INSERT INTO Shift (shiftStart, shiftEnd) VALUES (@start, @end)";
-                    cmd.Parameters.AddWithValue("@start", entity.Start);
-                    cmd.Parameters.AddWithValue("@end", entity.End);
+                    cmd.CommandText = "INSERT INTO Campaign (name, description) VALUES (@name, @description)";
+                    cmd.Parameters.AddWithValue("@name", entity.Name);
+                    cmd.Parameters.AddWithValue("@description", entity.Description);
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -35,34 +35,34 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "DELETE FROM Shift WHERE id = @id";
+                    cmd.CommandText = "DELETE FROM Campaign WHERE id = @id";
                     cmd.Parameters.AddWithValue("@id", id);
                     cmd.ExecuteNonQuery();
                 }
             }
         }
 
-        public Shift Read(int id)
+        public Campaign Read(int id)
         {
-            Shift temp = null;
+            Campaign temp = null;
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM Shift WHERE id = @id";
+                    cmd.CommandText = "SELECT * FROM Campaign WHERE id = @id";
                     cmd.Parameters.AddWithValue("@id", id);
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
                         {
-                            temp = new Shift(
-                                reader.GetInt32(0),
-                                reader.GetDateTime(1),
-                                reader.GetDateTime(2),
-                                new Employee(reader.GetInt32(3)));
+                            temp = new Campaign(
+                                        reader.GetInt32(0),
+                                        reader.GetString(1),
+                                        reader.GetString(2)
+                                    );
                         }
                     }
                 }
@@ -71,17 +71,16 @@ namespace DataAccesLayer
             return temp;
         }
 
-        public void Update(Shift entity)
+        public void Update(Campaign entity)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "UPDATE Shift SET(shiftStart = @start, shiftEnd = @end, employeeId = @employeeId) WHERE id = @id";
-                    cmd.Parameters.AddWithValue("@start", entity.Start);
-                    cmd.Parameters.AddWithValue("@end", entity.End);
-                    cmd.Parameters.AddWithValue("@employeeId", entity.Employee.Id);
+                    cmd.CommandText = "UPDATE Campaign SET(name = @name, description = @description) WHERE id = @id";
+                    cmd.Parameters.AddWithValue("@name", entity.Name);
+                    cmd.Parameters.AddWithValue("@description", entity.Description);
                     cmd.Parameters.AddWithValue("@id", entity.Id);
                     cmd.ExecuteNonQuery();
                 }
