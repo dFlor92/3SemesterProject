@@ -23,7 +23,6 @@ namespace BusinessLogic
         public SystemUser Read(int id)
         {
             throw new NotImplementedException();
-            
         }
 
         public void Update(SystemUser entity)
