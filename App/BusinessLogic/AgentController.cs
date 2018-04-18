@@ -8,9 +8,9 @@ using Core;
 
 namespace BusinessLogic
 {
-    public class SystemUserController : ICRUD<SystemUser>
+    public class AgentController : ICRUD<Agent>
     {
-        public void Create(SystemUser entity)
+        public void Create(Agent entity)
         {
             throw new NotImplementedException();
         }
@@ -20,12 +20,12 @@ namespace BusinessLogic
             throw new NotImplementedException();
         }
 
-        public SystemUser Read(int id)
+        public Agent Read(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(SystemUser entity)
+        public void Update(Agent entity)
         {
             throw new NotImplementedException();
         }
