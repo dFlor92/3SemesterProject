@@ -40,7 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgentController.cs" />
+    <Compile Include="CampaignController.cs" />
+    <Compile Include="LeadController.cs" />
+    <Compile Include="MeetingController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionController.cs" />
     <Compile Include="SystemUserController.cs" />
   </ItemGroup>
   <ItemGroup>
