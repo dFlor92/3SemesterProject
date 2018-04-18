@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Core
 {
+    public enum Role { User, Admin };
     public class SystemUser
     {
         public int Id { get; set; }
@@ -13,10 +14,10 @@ namespace Core
 
         public string Email { get; set; }
 
-        public enum Role {User, Admin};
-
-        public SystemUser(string name, string email, Role role)
+        public Role Role { get; set; }
+        public SystemUser(int id, string name, string email, Role role)
         {
+            this.Id = id;
             this.Name = name;
             this.Email = email;
             
