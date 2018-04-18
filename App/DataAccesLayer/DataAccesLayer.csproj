@@ -41,8 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBAgent.cs" />
     <Compile Include="DBCampaign.cs" />
     <Compile Include="DBLead.cs" />
+    <Compile Include="DBMeeting.cs" />
+    <Compile Include="DBSession.cs" />
+    <Compile Include="DBSystemUser.cs" />
     <Compile Include="ICRUD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

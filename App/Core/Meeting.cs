@@ -22,7 +22,15 @@ namespace Core
             this.Status = (Status)status;
             this.Agent = agent;
             this.Lead = lead;
-       
+
+        }
+
+        public Meeting(int id, DateTime date, int type, int status, int agentId, int leadId)
+        {
+            this.Id = id;
+            this.Date = date;
+            this.Type = (Type)type;
+            this.Status = (Status)status;
         }
     }
 }

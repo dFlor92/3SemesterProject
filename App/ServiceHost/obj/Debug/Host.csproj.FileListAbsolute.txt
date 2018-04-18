@@ -1,0 +1,2 @@
+C:\Users\Daniel\Source\Repos\3SemesterProject\App\ServiceHost\obj\Debug\Host.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Source\Repos\3SemesterProject\App\ServiceHost\obj\Debug\Host.csproj.CoreCompileInputs.cache

@@ -8,21 +8,32 @@ namespace Core
         public String Name { get; set; }
         public int Phone { get; set; }
 
-        public String Email { get; set; }
-        public Agent(int id, string name, string email, int phone)
-        {
-            this.Id = id;
-            this.Name = name;
-            this.Email = email;
-            this.Phone = phone;
-        }
+        public Campaign Campaign { get; set; }
 
-        public Agent(string name, int id, string email, Campaign campaign)
+        public String Email { get; set; }
+        //public Agent(int id, string name, string email, int phone)
+        //{
+        //    this.Id = id;
+        //    this.Name = name;
+        //    this.Email = email;
+        //    this.Phone = phone;
+        //}
+
+        public Agent(int id, string name, string email, Campaign campaign)
         {
             this.Name = name;
             this.Id = id;
             this.Email = email;
             this.Phone = Phone;
+        }
+
+        public Agent(int id, string name, string email, int campaignId)
+        {
+            this.Name = name;
+            this.Id = id;
+            this.Email = email;
+            this.Phone = Phone;
+            
         }
     }
 }

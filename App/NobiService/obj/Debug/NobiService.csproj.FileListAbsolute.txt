@@ -1,0 +1,2 @@
+C:\Users\Daniel\Source\Repos\3SemesterProject\App\NobiService\obj\Debug\NobiService.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Source\Repos\3SemesterProject\App\NobiService\obj\Debug\NobiService.csproj.CoreCompileInputs.cache
