@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccesLayer", "DataAcces
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{45970213-07A4-44A6-9DB8-3D38D116BF86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService", "WebService\WebService.csproj", "{F43606AF-0B50-412F-A70F-4EF7307B33C2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NobiService", "NobiService\NobiService.csproj", "{F48C68BB-067E-4D3D-898D-2106C0B4F0FB}"
 EndProject
 Global
@@ -37,10 +35,6 @@ Global
 		{45970213-07A4-44A6-9DB8-3D38D116BF86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45970213-07A4-44A6-9DB8-3D38D116BF86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45970213-07A4-44A6-9DB8-3D38D116BF86}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F43606AF-0B50-412F-A70F-4EF7307B33C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F43606AF-0B50-412F-A70F-4EF7307B33C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F43606AF-0B50-412F-A70F-4EF7307B33C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F43606AF-0B50-412F-A70F-4EF7307B33C2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F48C68BB-067E-4D3D-898D-2106C0B4F0FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F48C68BB-067E-4D3D-898D-2106C0B4F0FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F48C68BB-067E-4D3D-898D-2106C0B4F0FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
