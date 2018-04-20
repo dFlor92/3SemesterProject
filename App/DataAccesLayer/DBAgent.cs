@@ -118,10 +118,6 @@ namespace DataAccesLayer
 
         public Agent BuildObject(SqlDataReader reader)
         {
-            for (int i = 0; i < reader.FieldCount; i++)
-            {
-                Console.WriteLine(reader.GetName(i));
-            }
             Campaign temp = DBCampaign.BuildObject(reader);
             return new Agent(
                 reader.GetInt32(reader.GetOrdinal("agent_id")),
