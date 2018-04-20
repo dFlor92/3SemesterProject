@@ -47,11 +47,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NobiService\NobiService.csproj">
-      <Project>{f6026a26-db8b-4860-aeda-85d7e5220411}</Project>
+      <Project>{f48c68bb-067e-4d3d-898d-2106c0b4f0fb}</Project>
       <Name>NobiService</Name>
     </ProjectReference>
   </ItemGroup>

@@ -8,8 +8,13 @@ using Core;
 
 namespace BusinessLogic
 {
-    public class SystemUserController : ICRUD<SystemUser>
+    public class SystemUserController : IDatabaseCRUD<SystemUser>
     {
+        public IEnumerable<SystemUser> All()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Create(SystemUser entity)
         {
             throw new NotImplementedException();

@@ -7,3 +7,12 @@ C:\Users\Daniel\Source\Repos\3SemesterProject\App\DataAccesLayer\bin\Debug\Core.
 C:\Users\Daniel\Source\Repos\3SemesterProject\App\DataAccesLayer\obj\Debug\DataAccesLayer.csproj.CopyComplete
 C:\Users\Daniel\Source\Repos\3SemesterProject\App\DataAccesLayer\obj\Debug\DataAccesLayer.dll
 C:\Users\Daniel\Source\Repos\3SemesterProject\App\DataAccesLayer\obj\Debug\DataAccesLayer.pdb
+C:\Users\Watten\Source\Repos\3SemesterProject\App\DataAccesLayer\bin\Debug\DataAccesLayer.dll
+C:\Users\Watten\Source\Repos\3SemesterProject\App\DataAccesLayer\bin\Debug\DataAccesLayer.pdb
+C:\Users\Watten\Source\Repos\3SemesterProject\App\DataAccesLayer\bin\Debug\Core.dll
+C:\Users\Watten\Source\Repos\3SemesterProject\App\DataAccesLayer\bin\Debug\Core.pdb
+C:\Users\Watten\Source\Repos\3SemesterProject\App\DataAccesLayer\obj\Debug\DataAccesLayer.csprojResolveAssemblyReference.cache
+C:\Users\Watten\Source\Repos\3SemesterProject\App\DataAccesLayer\obj\Debug\DataAccesLayer.csproj.CoreCompileInputs.cache
+C:\Users\Watten\Source\Repos\3SemesterProject\App\DataAccesLayer\obj\Debug\DataAccesLayer.csproj.CopyComplete
+C:\Users\Watten\Source\Repos\3SemesterProject\App\DataAccesLayer\obj\Debug\DataAccesLayer.dll
+C:\Users\Watten\Source\Repos\3SemesterProject\App\DataAccesLayer\obj\Debug\DataAccesLayer.pdb

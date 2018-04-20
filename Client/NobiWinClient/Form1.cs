@@ -1,4 +1,4 @@
-﻿using NobiWinClient.ServiceReference1;
+﻿using NobiWinClient.AgentService;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,13 +25,20 @@ namespace NobiWinClient
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ServiceClient client = new ServiceClient();
-            Shift shift = new Shift
+            AgentServiceClient client = new AgentServiceClient();
+            Agent agent = client.Read(Int32.Parse(txt1.Text));
+            if (agent != null)
             {
-                shiftStart = start_picker.Value,
-                shiftEnd = end_picker.Value
-            };
-            client.Create(shift);
+                txt2.Text = agent.Name;
+                txt3.Text = agent.Email;
+                txt4.Text = agent.Phone;
+                txt5.Text = agent.Campaign.Name;
+            }
+            else
+            {
+                MessageBox.Show("Der findes ingen agent med id: " + txt1.Text);
+            }
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

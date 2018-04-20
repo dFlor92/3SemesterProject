@@ -29,139 +29,131 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.start_picker = new System.Windows.Forms.DateTimePicker();
-            this.end_picker = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.start_hour = new System.Windows.Forms.ComboBox();
-            this.start_minute = new System.Windows.Forms.ComboBox();
-            this.end_minute = new System.Windows.Forms.ComboBox();
-            this.end_hour = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txt1 = new System.Windows.Forms.TextBox();
+            this.txt4 = new System.Windows.Forms.TextBox();
+            this.txt3 = new System.Windows.Forms.TextBox();
+            this.txt2 = new System.Windows.Forms.TextBox();
+            this.txt5 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(181, 13);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 17);
+            this.label1.Size = new System.Drawing.Size(19, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Starttidspunkt";
+            this.label1.Text = "Id:";
             // 
-            // start_picker
+            // button1
             // 
-            this.start_picker.Location = new System.Drawing.Point(16, 34);
-            this.start_picker.Name = "start_picker";
-            this.start_picker.Size = new System.Drawing.Size(188, 22);
-            this.start_picker.TabIndex = 1;
-            // 
-            // end_picker
-            // 
-            this.end_picker.Location = new System.Drawing.Point(16, 95);
-            this.end_picker.Name = "end_picker";
-            this.end_picker.Size = new System.Drawing.Size(188, 22);
-            this.end_picker.TabIndex = 3;
+            this.button1.Location = new System.Drawing.Point(184, 35);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(101, 24);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Find agent";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 74);
+            this.label2.Location = new System.Drawing.Point(12, 26);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Sluttidspunkt";
+            this.label2.Size = new System.Drawing.Size(36, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Navn:";
             // 
-            // button1
+            // label3
             // 
-            this.button1.Location = new System.Drawing.Point(101, 148);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 30);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Opret vagt";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 57);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Email:";
             // 
-            // start_hour
+            // label4
             // 
-            this.start_hour.FormattingEnabled = true;
-            this.start_hour.Items.AddRange(new object[] {
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18"});
-            this.start_hour.Location = new System.Drawing.Point(210, 34);
-            this.start_hour.Name = "start_hour";
-            this.start_hour.Size = new System.Drawing.Size(57, 24);
-            this.start_hour.TabIndex = 5;
-            this.start_hour.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(11, 88);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Telefon:";
             // 
-            // start_minute
+            // txt1
             // 
-            this.start_minute.FormattingEnabled = true;
-            this.start_minute.Items.AddRange(new object[] {
-            "00",
-            "15",
-            "30",
-            "45"});
-            this.start_minute.Location = new System.Drawing.Point(273, 34);
-            this.start_minute.Name = "start_minute";
-            this.start_minute.Size = new System.Drawing.Size(57, 24);
-            this.start_minute.TabIndex = 6;
+            this.txt1.Location = new System.Drawing.Point(205, 10);
+            this.txt1.Name = "txt1";
+            this.txt1.Size = new System.Drawing.Size(79, 20);
+            this.txt1.TabIndex = 8;
             // 
-            // end_minute
+            // txt4
             // 
-            this.end_minute.FormattingEnabled = true;
-            this.end_minute.Items.AddRange(new object[] {
-            "00",
-            "15",
-            "30",
-            "45"});
-            this.end_minute.Location = new System.Drawing.Point(273, 97);
-            this.end_minute.Name = "end_minute";
-            this.end_minute.Size = new System.Drawing.Size(57, 24);
-            this.end_minute.TabIndex = 8;
+            this.txt4.Location = new System.Drawing.Point(77, 85);
+            this.txt4.Name = "txt4";
+            this.txt4.Size = new System.Drawing.Size(79, 20);
+            this.txt4.TabIndex = 9;
             // 
-            // end_hour
+            // txt3
             // 
-            this.end_hour.FormattingEnabled = true;
-            this.end_hour.Items.AddRange(new object[] {
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18"});
-            this.end_hour.Location = new System.Drawing.Point(210, 97);
-            this.end_hour.Name = "end_hour";
-            this.end_hour.Size = new System.Drawing.Size(57, 24);
-            this.end_hour.TabIndex = 7;
+            this.txt3.Location = new System.Drawing.Point(78, 54);
+            this.txt3.Name = "txt3";
+            this.txt3.Size = new System.Drawing.Size(79, 20);
+            this.txt3.TabIndex = 10;
+            // 
+            // txt2
+            // 
+            this.txt2.Location = new System.Drawing.Point(78, 23);
+            this.txt2.Name = "txt2";
+            this.txt2.Size = new System.Drawing.Size(79, 20);
+            this.txt2.TabIndex = 11;
+            // 
+            // txt5
+            // 
+            this.txt5.Location = new System.Drawing.Point(77, 115);
+            this.txt5.Name = "txt5";
+            this.txt5.Size = new System.Drawing.Size(79, 20);
+            this.txt5.TabIndex = 13;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(11, 118);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Kampagne:";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 190);
-            this.Controls.Add(this.end_minute);
-            this.Controls.Add(this.end_hour);
-            this.Controls.Add(this.start_minute);
-            this.Controls.Add(this.start_hour);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.end_picker);
+            this.ClientSize = new System.Drawing.Size(296, 154);
+            this.Controls.Add(this.txt5);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txt2);
+            this.Controls.Add(this.txt3);
+            this.Controls.Add(this.txt4);
+            this.Controls.Add(this.txt1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.start_picker);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Client";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -173,14 +165,16 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker start_picker;
-        private System.Windows.Forms.DateTimePicker end_picker;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox start_hour;
-        private System.Windows.Forms.ComboBox start_minute;
-        private System.Windows.Forms.ComboBox end_minute;
-        private System.Windows.Forms.ComboBox end_hour;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txt1;
+        private System.Windows.Forms.TextBox txt4;
+        private System.Windows.Forms.TextBox txt3;
+        private System.Windows.Forms.TextBox txt2;
+        private System.Windows.Forms.TextBox txt5;
+        private System.Windows.Forms.Label label5;
     }
 }
 

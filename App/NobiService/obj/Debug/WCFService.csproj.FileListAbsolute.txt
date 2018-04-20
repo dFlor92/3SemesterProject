@@ -1,0 +1,11 @@
+C:\Users\Watten\source\repos\3SemesterProject\App\NobiService\bin\Debug\NobiService.dll
+C:\Users\Watten\source\repos\3SemesterProject\App\NobiService\bin\Debug\NobiService.pdb
+C:\Users\Watten\source\repos\3SemesterProject\App\NobiService\bin\Debug\Core.dll
+C:\Users\Watten\source\repos\3SemesterProject\App\NobiService\bin\Debug\DataAccesLayer.dll
+C:\Users\Watten\source\repos\3SemesterProject\App\NobiService\bin\Debug\Core.pdb
+C:\Users\Watten\source\repos\3SemesterProject\App\NobiService\bin\Debug\DataAccesLayer.pdb
+C:\Users\Watten\source\repos\3SemesterProject\App\NobiService\obj\Debug\WCFService.csprojResolveAssemblyReference.cache
+C:\Users\Watten\source\repos\3SemesterProject\App\NobiService\obj\Debug\WCFService.csproj.CoreCompileInputs.cache
+C:\Users\Watten\source\repos\3SemesterProject\App\NobiService\obj\Debug\WCFService.csproj.CopyComplete
+C:\Users\Watten\source\repos\3SemesterProject\App\NobiService\obj\Debug\NobiService.dll
+C:\Users\Watten\source\repos\3SemesterProject\App\NobiService\obj\Debug\NobiService.pdb

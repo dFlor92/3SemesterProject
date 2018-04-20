@@ -3,8 +3,12 @@
     "",
     "\\App",
     "\\App\\BusinessLogic",
-    "\\App\\Core"
+    "\\App\\Core",
+    "\\App\\DataAccesLayer",
+    "\\App\\NobiService",
+    "\\Client",
+    "\\Client\\NobiWinClient"
   ],
-  "SelectedNode": "\\App\\BusinessLogic\\SystemUserController.cs",
+  "SelectedNode": "\\Client\\NobiWinClient.sln",
   "PreviewInSolutionExplorer": false
 }

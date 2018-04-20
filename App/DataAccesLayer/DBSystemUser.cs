@@ -9,9 +9,33 @@ using Core;
 
 namespace DataAccesLayer
 {
-    class DBSystemUser : ICRUD<SystemUser>
+    class DBSystemUser : IDatabaseCRUD<SystemUser>
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["MSSQL"].ConnectionString;
+
+        public IEnumerable<SystemUser> All()
+        {
+            List<SystemUser> temp = new List<SystemUser>();
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM SystemUser";
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            temp = BuildMany(reader);
+                        }
+                    }
+                }
+            }
+
+            return temp;
+        }
 
         public void Create(SystemUser entity)
         {
@@ -59,14 +83,9 @@ namespace DataAccesLayer
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        if (reader.Read())
+                        if (reader.HasRows)
                         {
-                            temp = new SystemUser(
-                                        reader.GetInt32(0),
-                                        reader.GetString(1),
-                                        reader.GetString(2),
-                                        (Role) Enum.Parse(typeof(Role), reader.GetInt32(3).ToString()) // This is an int that needs to be an enum so we cast it to a role
-                                    );
+                            temp = build(reader);
                         }
                     }
                 }
@@ -90,6 +109,28 @@ namespace DataAccesLayer
                     cmd.ExecuteNonQuery();
                 }
             }
+        }
+
+        private SystemUser build(SqlDataReader reader)
+        {
+            return new SystemUser(
+                reader.GetInt32(0),
+                reader.GetString(1),
+                reader.GetString(2),
+                (Role)Enum.Parse(typeof(Role), reader.GetInt32(3).ToString()) // This is an int that needs to be an enum so we cast it to a role
+            );
+        }
+
+        private List<SystemUser> BuildMany(SqlDataReader reader)
+        {
+            List<SystemUser> temp = new List<SystemUser>();
+
+            while (reader.Read())
+            {
+                temp.Add(build(reader));
+            }
+
+            return temp;
         }
     }
 }

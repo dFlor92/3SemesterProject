@@ -9,28 +9,33 @@ using Core;
 namespace BusinessLogic
 {
 
-    public class LeadController : ICRUD<Lead>
+    public class LeadController : IDatabaseCRUD<Lead>
     {
         DBLead dbLead = new DBLead();
 
+        public IEnumerable<Lead> All()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Create(Lead entity)
         {
-            dbLead.Create(entity);
+            throw new NotImplementedException();
         }
 
         public void Delete(int id)
         {
-            dbLead.Delete(id);
+            throw new NotImplementedException();
         }
 
         public Lead Read(int id)
         {
-            return dbLead.Read(id);
+            throw new NotImplementedException();
         }
 
         public void Update(Lead entity)
         {
-            dbLead.Update(entity);
+            throw new NotImplementedException();
         }
     }
 }

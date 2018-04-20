@@ -9,9 +9,33 @@ using Core;
 
 namespace DataAccesLayer
 {
-    class DBAgent : ICRUD<Agent>
+    public class DBAgent : IDatabaseCRUD<Agent>
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["MSSQL"].ConnectionString;
+
+        public IEnumerable<Agent> All()
+        {
+            IEnumerable<Agent> temp = null;
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM Agent JOIN Campaign ON (campaign.id = agent.campaignId)";
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            temp = BuildObjects(reader);
+                        }
+                    }
+                }
+            }
+
+            return temp;
+        }
 
         public void Create(Agent entity)
         {
@@ -25,8 +49,6 @@ namespace DataAccesLayer
                     cmd.Parameters.AddWithValue("@email", entity.Email);
                     cmd.Parameters.AddWithValue("@campaign", entity.Campaign);
                     cmd.ExecuteNonQuery();
-
-                   
                 }
             }
         }
@@ -54,19 +76,21 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM Agent WHERE id = @id";
+                    cmd.CommandText = "SELECT agent.id as agent_id," +
+                        "agent.name as agent_name," +
+                        "agent.email as agent_email," +
+                        "agent.phone as agent_phone," +
+                        "campaign.id as campaign_id," +
+                        "campaign.name as campaign_name," +
+                        "campaign.description as campaign_description" +
+                        " FROM Agent JOIN Campaign ON (campaign.id = agent.campaignId) WHERE agent.id = @id";
                     cmd.Parameters.AddWithValue("@id", id);
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
                         {
-                            temp = new Agent(
-                                        reader.GetInt32(0),
-                                        reader.GetString(1),
-                                        reader.GetString(2),
-                                        reader.GetInt32(3)
-                                    );
+                            temp = BuildObject(reader);
                         }
                     }
                 }
@@ -90,6 +114,40 @@ namespace DataAccesLayer
                     cmd.ExecuteNonQuery();
                 }
             }
+        }
+
+        public Agent BuildObject(SqlDataReader reader)
+        {
+            for (int i = 0; i < reader.FieldCount; i++)
+            {
+                Console.WriteLine(reader.GetName(i));
+            }
+            Campaign temp = DBCampaign.BuildObject(reader);
+            return new Agent(
+                reader.GetInt32(reader.GetOrdinal("agent_id")),
+                reader.GetString(reader.GetOrdinal("agent_name")),
+                reader.GetString(reader.GetOrdinal("agent_email")),
+                reader.GetString(reader.GetOrdinal("agent_phone")),
+                temp
+            );
+        }
+
+        private IEnumerable<Agent> BuildObjects(SqlDataReader reader)
+        {
+            List<Agent> temp = new List<Agent>();
+
+            while (reader.Read())
+            {
+                temp.Add(BuildObject(reader));
+            }
+
+            return temp;
+
+        }
+
+        IEnumerable<Agent> IDatabaseCRUD<Agent>.All()
+        {
+            throw new NotImplementedException();
         }
     }
 }

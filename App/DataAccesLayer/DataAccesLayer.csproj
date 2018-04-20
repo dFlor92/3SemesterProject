@@ -47,7 +47,7 @@
     <Compile Include="DBMeeting.cs" />
     <Compile Include="DBSession.cs" />
     <Compile Include="DBSystemUser.cs" />
-    <Compile Include="ICRUD.cs" />
+    <Compile Include="IDatabaseCRUD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

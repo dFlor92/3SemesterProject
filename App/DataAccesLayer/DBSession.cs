@@ -9,9 +9,33 @@ using Core;
 
 namespace DataAccesLayer
 {
-    class DBSession : ICRUD<Session>
+    class DBSession : IDatabaseCRUD<Session>
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["MSSQL"].ConnectionString;
+
+        public IEnumerable<Session> All()
+        {
+            List<Session> temp = new List<Session>();
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM Session";
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            temp = BuildObjects(reader);
+                        }
+                    }
+                }
+            }
+
+            return temp;
+        }
 
         public void Create(Session entity)
         {
@@ -20,9 +44,11 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "INSERT INTO Session (date, duration) VALUES (@date, @duration)";
+                    cmd.CommandText = "INSERT INTO Session (date, duration, systemUserId, leadId) VALUES (@date, @duration, @systemUserId, @leadId)";
                     cmd.Parameters.AddWithValue("@name", entity.Date);
                     cmd.Parameters.AddWithValue("@description", entity.Duration);
+                    cmd.Parameters.AddWithValue("@systemUserId", entity.SystemUser.Id);
+                    cmd.Parameters.AddWithValue("@leadId", entity.Lead.Id);
                     cmd.ExecuteNonQuery();
 
               
@@ -60,11 +86,7 @@ namespace DataAccesLayer
                     {
                         if (reader.Read())
                         {
-                            temp = new Session(
-                                        reader.GetInt32(0),
-                                        reader.GetDateTime(1),
-                                        reader.GetTimeSpan(2)
-                                    );
+                            temp = BuildObject(reader);
                         }
                     }
                 }
@@ -80,13 +102,36 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "UPDATE Session SET(date = @date, duration = @duration) WHERE id = @id";
+                    cmd.CommandText = "UPDATE Session SET(date = @date, duration = @duration, systemUserId = @systemUserId, leadId = @leadId) WHERE id = @id";
                     cmd.Parameters.AddWithValue("@name", entity.Date);
                     cmd.Parameters.AddWithValue("@description", entity.Duration);
-                    cmd.Parameters.AddWithValue("@id", entity.Id);
+                    cmd.Parameters.AddWithValue("@systemUserId", entity.SystemUser.Id);
+                    cmd.Parameters.AddWithValue("@leadId", entity.Lead.Id);
                     cmd.ExecuteNonQuery();
                 }
             }
+        }
+        private Session BuildObject(SqlDataReader reader)
+        {
+            return new Session(
+                reader.GetInt32(0),
+                reader.GetDateTime(1),
+                reader.GetTimeSpan(2),
+                new SystemUser(reader.GetInt32(3)),
+                new Lead(reader.GetInt32(4))
+            );
+        }
+
+        private List<Session> BuildObjects(SqlDataReader reader)
+        {
+            List<Session> temp = new List<Session>();
+
+            while (reader.Read())
+            {
+                temp.Add(BuildObject(reader));
+            }
+
+            return temp;
         }
     }
 }

@@ -8,8 +8,13 @@ using Core;
 
 namespace BusinessLogic
 {
-    public class MeetingController : ICRUD<Meeting>
+    public class MeetingController : IDatabaseCRUD<Meeting>
     {
+        public IEnumerable<Meeting> All()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Create(Meeting entity)
         {
             throw new NotImplementedException();

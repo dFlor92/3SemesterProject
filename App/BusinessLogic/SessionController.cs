@@ -8,8 +8,13 @@ using Core;
 
 namespace BusinessLogic
 {
-    public class SessionController : ICRUD<Session>
+    public class SessionController : IDatabaseCRUD<Session>
     {
+        public IEnumerable<Session> All()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Create(Session entity)
         {
             throw new NotImplementedException();

@@ -8,8 +8,20 @@ using Core;
 
 namespace BusinessLogic
 {
-    public class AgentController : ICRUD<Agent>
+    public class AgentController : IDatabaseCRUD<Agent>
     {
+        private IDatabaseCRUD<Agent> db;
+
+        public AgentController()
+        {
+            db =  new DBAgent();
+        }
+
+        public IEnumerable<Agent> All()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Create(Agent entity)
         {
             throw new NotImplementedException();
@@ -22,7 +34,7 @@ namespace BusinessLogic
 
         public Agent Read(int id)
         {
-            throw new NotImplementedException();
+            return db.Read(id);
         }
 
         public void Update(Agent entity)

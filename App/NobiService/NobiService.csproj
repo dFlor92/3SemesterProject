@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F6026A26-DB8B-4860-AEDA-85D7E5220411}</ProjectGuid>
+    <ProjectGuid>{F48C68BB-067E-4D3D-898D-2106C0B4F0FB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NobiService</RootNamespace>
@@ -55,9 +55,9 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IService.cs" />
+    <Compile Include="IAgentService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service.cs" />
+    <Compile Include="AgentService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
