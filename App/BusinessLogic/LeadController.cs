@@ -15,27 +15,27 @@ namespace BusinessLogic
 
         public IEnumerable<Lead> All()
         {
-            throw new NotImplementedException();
+            return dbLead.All();
         }
 
         public void Create(Lead entity)
         {
-            throw new NotImplementedException();
+            dbLead.Create(entity);
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            dbLead.Delete(id);
         }
 
         public Lead Read(int id)
         {
-            throw new NotImplementedException();
+            return dbLead.Read(id);
         }
 
         public void Update(Lead entity)
         {
-            throw new NotImplementedException();
+            dbLead.Update(entity);
         }
     }
 }

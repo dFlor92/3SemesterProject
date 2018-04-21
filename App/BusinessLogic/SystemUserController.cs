@@ -10,30 +10,31 @@ namespace BusinessLogic
 {
     public class SystemUserController : IDatabaseCRUD<SystemUser>
     {
+        DBSystemUser dbSystemUser = new DBSystemUser();
         public IEnumerable<SystemUser> All()
         {
-            throw new NotImplementedException();
+            return dbSystemUser.All();
         }
 
         public void Create(SystemUser entity)
         {
-            throw new NotImplementedException();
+            dbSystemUser.Create(entity);
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            dbSystemUser.Delete(id);
         }
 
         public SystemUser Read(int id)
         {
-            throw new NotImplementedException();
+            return dbSystemUser.Read(id);
             
         }
 
         public void Update(SystemUser entity)
         {
-            throw new NotImplementedException();
+            dbSystemUser.Update(entity);
         }
     }
 }

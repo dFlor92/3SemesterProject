@@ -9,7 +9,7 @@ using Core;
 
 namespace DataAccesLayer
 {
-    class DBSession : IDatabaseCRUD<Session>
+    public class DBSession : IDatabaseCRUD<Session>
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["MSSQL"].ConnectionString;
 

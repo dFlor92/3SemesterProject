@@ -11,6 +11,7 @@ namespace BusinessLogic
     public class AgentController : IDatabaseCRUD<Agent>
     {
         private IDatabaseCRUD<Agent> db;
+        
 
         public AgentController()
         {
@@ -19,17 +20,17 @@ namespace BusinessLogic
 
         public IEnumerable<Agent> All()
         {
-            throw new NotImplementedException();
+            return db.All();
         }
 
         public void Create(Agent entity)
         {
-            throw new NotImplementedException();
+            db.Create(entity);
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            db.Delete(id);
         }
 
         public Agent Read(int id)
@@ -39,7 +40,7 @@ namespace BusinessLogic
 
         public void Update(Agent entity)
         {
-            throw new NotImplementedException();
+            db.Update(entity);
         }
     }
 }

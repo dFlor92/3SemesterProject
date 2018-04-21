@@ -40,13 +40,13 @@ namespace Core
             this.Campaign = campaign;
         }
 
-        public Agent(int id, string name, string email, string phone, int campaignId)
-        {
-            this.Name = name;
-            this.Id = id;
-            this.Email = email;
-            this.Phone = phone;
+        //public Agent(int id, string name, string email, string phone, int campaignId)
+        //{
+        //    this.Name = name;
+        //    this.Id = id;
+        //    this.Email = email;
+        //    this.Phone = phone;
             
-        }
+        //}
     }
 }

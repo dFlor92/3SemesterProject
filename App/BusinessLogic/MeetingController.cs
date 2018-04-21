@@ -10,29 +10,30 @@ namespace BusinessLogic
 {
     public class MeetingController : IDatabaseCRUD<Meeting>
     {
+        DBMeeting dbMeeting = new DBMeeting();
         public IEnumerable<Meeting> All()
         {
-            throw new NotImplementedException();
+            return dbMeeting.All();
         }
 
         public void Create(Meeting entity)
         {
-            throw new NotImplementedException();
+            dbMeeting.Create(entity);
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            dbMeeting.Delete(id);
         }
 
         public Meeting Read(int id)
         {
-            throw new NotImplementedException();
+           return dbMeeting.Read(id);
         }
 
         public void Update(Meeting entity)
         {
-            throw new NotImplementedException();
+            dbMeeting.Update(entity);
         }
     }
 }

@@ -14,27 +14,27 @@ namespace BusinessLogic
 
         public IEnumerable<Campaign> All()
         {
-            throw new NotImplementedException();
+            return dbCampaign.All();
         }
 
         public void Create(Campaign entity)
         {
-            throw new NotImplementedException();
+            dbCampaign.Create(entity);
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            dbCampaign.Delete(id);
         }
 
         public Campaign Read(int id)
         {
-            throw new NotImplementedException();
+            return dbCampaign.Read(id);
         }
 
         public void Update(Campaign entity)
         {
-            throw new NotImplementedException();
+            dbCampaign.Update(entity);
         }
     }
 }
