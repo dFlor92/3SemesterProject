@@ -22,7 +22,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT campaign.id as campaign_name," +
+                    cmd.CommandText = "SELECT campaign.id as campaign_id," +
                         "campaign.name as campaign_name" +
                         "campaign.description as campaign_description" +
                         " FROM Campaign";
@@ -78,7 +78,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT campaign.id as campaign_name," +
+                    cmd.CommandText = "SELECT campaign.id as campaign_id," +
                         "campaign.name as campaign_name" +
                         "campaign.description as campaign_description" +
                         " FROM Campaign WHERE campaign.id = @id";

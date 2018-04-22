@@ -28,3 +28,13 @@ C:\Users\Watten\Source\Repos\3SemesterProject\Client\NobiWinClient\obj\Debug\Nob
 C:\Users\Watten\Source\Repos\3SemesterProject\Client\NobiWinClient\bin\Debug\NobiWinClient.exe.config
 C:\Users\Watten\Source\Repos\3SemesterProject\Client\NobiWinClient\bin\Debug\NobiWinClient.exe
 C:\Users\Watten\Source\Repos\3SemesterProject\Client\NobiWinClient\bin\Debug\NobiWinClient.pdb
+C:\Users\Daniel\source\repos\3SemesterProject\Client\NobiWinClient\bin\Debug\NobiWinClient.exe.config
+C:\Users\Daniel\source\repos\3SemesterProject\Client\NobiWinClient\bin\Debug\NobiWinClient.exe
+C:\Users\Daniel\source\repos\3SemesterProject\Client\NobiWinClient\bin\Debug\NobiWinClient.pdb
+C:\Users\Daniel\source\repos\3SemesterProject\Client\NobiWinClient\obj\Debug\NobiWinClient.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\source\repos\3SemesterProject\Client\NobiWinClient\obj\Debug\NobiWinClient.Form1.resources
+C:\Users\Daniel\source\repos\3SemesterProject\Client\NobiWinClient\obj\Debug\NobiWinClient.Properties.Resources.resources
+C:\Users\Daniel\source\repos\3SemesterProject\Client\NobiWinClient\obj\Debug\NobiWinClient.csproj.GenerateResource.cache
+C:\Users\Daniel\source\repos\3SemesterProject\Client\NobiWinClient\obj\Debug\NobiWinClient.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\source\repos\3SemesterProject\Client\NobiWinClient\obj\Debug\NobiWinClient.exe
+C:\Users\Daniel\source\repos\3SemesterProject\Client\NobiWinClient\obj\Debug\NobiWinClient.pdb

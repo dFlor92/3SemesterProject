@@ -2,13 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\App",
-    "\\App\\BusinessLogic",
-    "\\App\\Core",
     "\\App\\DataAccesLayer",
-    "\\App\\NobiService",
+    "\\App\\ServiceHost",
     "\\Client",
     "\\Client\\NobiWinClient"
   ],
-  "SelectedNode": "\\Client\\NobiWinClient.sln",
+  "SelectedNode": "\\Client\\NobiWinClient\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }

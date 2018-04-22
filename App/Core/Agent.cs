@@ -16,6 +16,9 @@ namespace Core
         [DataMember]
         public Campaign Campaign { get; set; }
 
+        //[DataMember]
+        //public string CampaignName { get { return Campaign.Name; } }
+
         [DataMember]
         public String Email { get; set; }
         //public Agent(int id, string name, string email, int phone)

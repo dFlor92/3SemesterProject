@@ -1,8 +1,10 @@
-﻿using NobiWinClient.AgentService;
+﻿
+using NobiWinClient.AgentService;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -11,6 +13,7 @@ using System.Windows.Forms;
 
 namespace NobiWinClient
 {
+
     public partial class Form1 : Form
     {
         public Form1()
@@ -45,5 +48,52 @@ namespace NobiWinClient
         {
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtRefresh_Click(object sender, EventArgs e)
+        {
+            AgentDataSet();
+        }
+
+        private void AgentDataSet()
+        {
+            AgentServiceClient client = new AgentServiceClient();
+
+            IEnumerable<Agent> agents = client.All();
+
+            dataGridView1.DataSource = agents;
+            //    DataGridViewRow row = dataGridView1.Rows[0];
+            //    if (agents != null)
+            //       foreach (Agent agent in agents)
+
+            //        {
+            //            row.Cells[0].Value = agent.Id;
+            //            row.Cells[1].Value = agent.Name;
+            //            row.Cells[2].Value = agent.Email;
+            //            row.Cells[3].Value = agent.Phone;
+            //          row.Cells[4].Value = agent.Campaign.Name;
+            //            //... lot more properties
+            //         }
+
+            //        else
+            //        {
+            //            MessageBox.Show("Der findes ingen agent med id: " + txt1.Text);
+            //        }
+
+            //    }
+
+            //}
+
+        }
+
+        
     }
 }
+
+
+    
+

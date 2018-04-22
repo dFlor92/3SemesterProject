@@ -22,7 +22,14 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM Agent JOIN Campaign ON (campaign.id = agent.campaignId)";
+                    cmd.CommandText = "SELECT agent.id as agent_id," +
+                        "agent.name as agent_name," +
+                        "agent.email as agent_email," +
+                        "agent.phone as agent_phone," +
+                        "campaign.id as campaign_id," +
+                        "campaign.name as campaign_name," +
+                        "campaign.description as campaign_description" +
+                        " FROM Agent JOIN Campaign ON (Campaign.id = Agent.campaignId)";
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
@@ -83,7 +90,7 @@ namespace DataAccesLayer
                         "campaign.id as campaign_id," +
                         "campaign.name as campaign_name," +
                         "campaign.description as campaign_description" +
-                        " FROM Agent JOIN Campaign ON (campaign.id = agent.campaignId) WHERE agent.id = @id";
+                        " FROM Agent JOIN Campaign ON (campaign.id = agent.campaignId) WHERE agent_id = @id";
                     cmd.Parameters.AddWithValue("@id", id);
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
@@ -141,10 +148,7 @@ namespace DataAccesLayer
 
         }
 
-        IEnumerable<Agent> IDatabaseCRUD<Agent>.All()
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 }
 
