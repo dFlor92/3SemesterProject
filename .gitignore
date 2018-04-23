@@ -1,1 +1,3 @@
 .vs
+/App/Core/obj/Debug
+/App/ServiceHost/obj/Debug

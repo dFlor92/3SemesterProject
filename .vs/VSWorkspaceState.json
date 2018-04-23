@@ -5,8 +5,10 @@
     "\\App\\DataAccesLayer",
     "\\App\\ServiceHost",
     "\\Client",
-    "\\Client\\NobiWinClient"
+    "\\Client\\NobiWinClient",
+    "\\Client\\WebClient",
+    "\\Client\\WebClient\\Controllers"
   ],
-  "SelectedNode": "\\Client\\NobiWinClient\\Form1.cs",
+  "SelectedNode": "\\Client\\WebClient\\Controllers\\AgentController.cs",
   "PreviewInSolutionExplorer": false
 }

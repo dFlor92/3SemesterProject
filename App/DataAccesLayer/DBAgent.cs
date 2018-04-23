@@ -90,7 +90,7 @@ namespace DataAccesLayer
                         "campaign.id as campaign_id," +
                         "campaign.name as campaign_name," +
                         "campaign.description as campaign_description" +
-                        " FROM Agent JOIN Campaign ON (campaign.id = agent.campaignId) WHERE agent_id = @id";
+                        " FROM Agent JOIN Campaign ON (campaign.id = agent.campaignId) WHERE agent.id = @id";
                     cmd.Parameters.AddWithValue("@id", id);
 
                     using (SqlDataReader reader = cmd.ExecuteReader())

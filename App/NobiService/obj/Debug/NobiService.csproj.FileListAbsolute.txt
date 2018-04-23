@@ -24,3 +24,16 @@ C:\Users\Daniel\Source\Repos\3SemesterProject\App\NobiService\obj\Debug\NobiServ
 C:\Users\Daniel\Source\Repos\3SemesterProject\App\NobiService\obj\Debug\NobiService.csproj.CopyComplete
 C:\Users\Daniel\Source\Repos\3SemesterProject\App\NobiService\obj\Debug\NobiService.dll
 C:\Users\Daniel\Source\Repos\3SemesterProject\App\NobiService\obj\Debug\NobiService.pdb
+C:\Users\1065490\Source\Repos\3SemesterProject\App\NobiService\bin\Debug\NobiService.dll
+C:\Users\1065490\Source\Repos\3SemesterProject\App\NobiService\bin\Debug\NobiService.pdb
+C:\Users\1065490\Source\Repos\3SemesterProject\App\NobiService\bin\Debug\BusinessLogic.dll
+C:\Users\1065490\Source\Repos\3SemesterProject\App\NobiService\bin\Debug\Core.dll
+C:\Users\1065490\Source\Repos\3SemesterProject\App\NobiService\bin\Debug\DataAccesLayer.dll
+C:\Users\1065490\Source\Repos\3SemesterProject\App\NobiService\bin\Debug\BusinessLogic.pdb
+C:\Users\1065490\Source\Repos\3SemesterProject\App\NobiService\bin\Debug\Core.pdb
+C:\Users\1065490\Source\Repos\3SemesterProject\App\NobiService\bin\Debug\DataAccesLayer.pdb
+C:\Users\1065490\Source\Repos\3SemesterProject\App\NobiService\obj\Debug\NobiService.csprojResolveAssemblyReference.cache
+C:\Users\1065490\Source\Repos\3SemesterProject\App\NobiService\obj\Debug\NobiService.csproj.CoreCompileInputs.cache
+C:\Users\1065490\Source\Repos\3SemesterProject\App\NobiService\obj\Debug\NobiService.csproj.CopyComplete
+C:\Users\1065490\Source\Repos\3SemesterProject\App\NobiService\obj\Debug\NobiService.dll
+C:\Users\1065490\Source\Repos\3SemesterProject\App\NobiService\obj\Debug\NobiService.pdb

@@ -20,3 +20,14 @@ C:\Users\Watten\Source\Repos\3SemesterProject\App\BusinessLogic\bin\Debug\DataAc
 C:\Users\Watten\Source\Repos\3SemesterProject\App\BusinessLogic\bin\Debug\Core.pdb
 C:\Users\Watten\Source\Repos\3SemesterProject\App\BusinessLogic\bin\Debug\DataAccesLayer.pdb
 C:\Users\Watten\Source\Repos\3SemesterProject\App\BusinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete
+C:\Users\1065490\Source\Repos\3SemesterProject\App\BusinessLogic\bin\Debug\BusinessLogic.dll
+C:\Users\1065490\Source\Repos\3SemesterProject\App\BusinessLogic\bin\Debug\BusinessLogic.pdb
+C:\Users\1065490\Source\Repos\3SemesterProject\App\BusinessLogic\bin\Debug\Core.dll
+C:\Users\1065490\Source\Repos\3SemesterProject\App\BusinessLogic\bin\Debug\DataAccesLayer.dll
+C:\Users\1065490\Source\Repos\3SemesterProject\App\BusinessLogic\bin\Debug\Core.pdb
+C:\Users\1065490\Source\Repos\3SemesterProject\App\BusinessLogic\bin\Debug\DataAccesLayer.pdb
+C:\Users\1065490\Source\Repos\3SemesterProject\App\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\1065490\Source\Repos\3SemesterProject\App\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\1065490\Source\Repos\3SemesterProject\App\BusinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete
+C:\Users\1065490\Source\Repos\3SemesterProject\App\BusinessLogic\obj\Debug\BusinessLogic.dll
+C:\Users\1065490\Source\Repos\3SemesterProject\App\BusinessLogic\obj\Debug\BusinessLogic.pdb

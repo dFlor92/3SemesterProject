@@ -3,50 +3,42 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using WebClient.AgentServiceWeb;
 
 namespace WebClient.Controllers
 {
-    public class AgentController : Controller
+    public class MeetingController : Controller
     {
-        private AgentServiceClient client { get; set; }
-
-        public AgentController()
+        public MeetingController()
         {
-            client = new AgentServiceClient();
+            
         }
-        // GET: Agent
+        // GET: Meeting
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: Agent/Details/5
+        // GET: Meeting/Details/5
         public ActionResult Details(int id)
         {
-    
-            Agent agent = client.Read(id);
-            System.Diagnostics.Debug.WriteLine("HALOHALOAHLAJDS");
-            return View(agent);
-        }
-
-        // GET: Agent/Create
-        public ActionResult Create()
-        {
-            
             return View();
         }
 
-        // POST: Agent/Create
+        // GET: Meeting/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: Meeting/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
             try
             {
                 // TODO: Add insert logic here
-                System.Diagnostics.Debug.WriteLine("DATA " + collection["Name"]);
-                //return RedirectToAction("Index");
-                return View();
+
+                return RedirectToAction("Index");
             }
             catch
             {
@@ -54,13 +46,13 @@ namespace WebClient.Controllers
             }
         }
 
-        // GET: Agent/Edit/5
+        // GET: Meeting/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Agent/Edit/5
+        // POST: Meeting/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -76,13 +68,13 @@ namespace WebClient.Controllers
             }
         }
 
-        // GET: Agent/Delete/5
+        // GET: Meeting/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Agent/Delete/5
+        // POST: Meeting/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {
