@@ -9,19 +9,19 @@ namespace Core
     {
         [DataMember]
         public int Id { get; set; }
+
         [DataMember]
         public DateTime Date { get; set; }
+
         [DataMember]
         public DateTime Duration { get; set; }
+
         [DataMember]
         public SystemUser SystemUser { get; set; }
+
         [DataMember]
         public Lead Lead { get; set; }
-
-        public Session(int id)
-	    {
-            this.Id = id;
-	    }
+        
         public Session(int id, DateTime date, DateTime duration, SystemUser systemUser, Lead lead)
         {
             this.Id = id;

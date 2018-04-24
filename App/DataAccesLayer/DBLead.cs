@@ -15,7 +15,7 @@ namespace DataAccesLayer
 
         public IEnumerable<Lead> All()
         {
-            List<Lead> temp = new List<Lead>();
+            IEnumerable<Lead> temp = null;
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -119,7 +119,7 @@ namespace DataAccesLayer
             );
         }
 
-        internal static List<Lead> BuildObjects(SqlDataReader reader)
+        internal static IEnumerable<Lead> BuildObjects(SqlDataReader reader)
         {
             List<Lead> temp = new List<Lead>();
 

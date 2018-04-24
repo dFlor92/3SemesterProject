@@ -15,7 +15,7 @@ namespace DataAccesLayer
 
         public IEnumerable<SystemUser> All()
         {
-            List<SystemUser> temp = new List<SystemUser>();
+            IEnumerable<SystemUser> temp = null;
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -44,7 +44,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "INSERT INTO SystemUser (name, email, role) VALUES (@name, @email, @role)";
+                    cmd.CommandText = "INSERT INTO SystemUser (systemUser_name, systemUser_email, systemUser_role) VALUES (@name, @email, @role)";
                     cmd.Parameters.AddWithValue("@name", entity.Name);
                     cmd.Parameters.AddWithValue("@description", entity.Email);
                     cmd.Parameters.AddWithValue("@role", entity.Role);
@@ -62,7 +62,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "DELETE FROM SystemUser WHERE id = @id";
+                    cmd.CommandText = "DELETE FROM SystemUser WHERE systemUser_id = @id";
                     cmd.Parameters.AddWithValue("@id", id);
                     cmd.ExecuteNonQuery();
                 }
@@ -78,7 +78,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM SystemUser WHERE id = @id";
+                    cmd.CommandText = "SELECT * FROM SystemUser WHERE systemUser_id = @id";
                     cmd.Parameters.AddWithValue("@id", id);
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
@@ -101,7 +101,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "UPDATE SystemUser SET(name = @name, email = @email, role = @role) WHERE id = @id";
+                    cmd.CommandText = "UPDATE SystemUser SET(systemUser_name = @name, systemUser_email = @email, systemUser_role = @role) WHERE systemUser_id = @id";
                     cmd.Parameters.AddWithValue("@name", entity.Name);
                     cmd.Parameters.AddWithValue("@description", entity.Email);
                     cmd.Parameters.AddWithValue("@Role", entity.Role);
@@ -114,14 +114,16 @@ namespace DataAccesLayer
         internal static SystemUser BuildObject(SqlDataReader reader)
         {
             return new SystemUser(
-                reader.GetInt32(0),
-                reader.GetString(1),
-                reader.GetString(2),
+                reader.GetInt32(reader.GetOrdinal("systemUser_id")),
+                reader.GetString(reader.GetOrdinal("systemUser_name")),
+                reader.GetString(reader.GetOrdinal("systemUser_email")),
+                reader.GetString(reader.GetOrdinal("systemUser_phone")),
+                reader.GetString(reader.GetOrdinal("systemUser_password")),
                 (Role)Enum.Parse(typeof(Role), reader.GetInt32(3).ToString()) // This is an int that needs to be an enum so we cast it to a role
             );
         }
 
-        internal static List<SystemUser> BuildObjects(SqlDataReader reader)
+        internal static IEnumerable<SystemUser> BuildObjects(SqlDataReader reader)
         {
             List<SystemUser> temp = new List<SystemUser>();
 

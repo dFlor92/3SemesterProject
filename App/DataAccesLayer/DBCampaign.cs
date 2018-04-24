@@ -15,7 +15,7 @@ namespace DataAccesLayer
 
         public IEnumerable<Campaign> All()
         {
-            List<Campaign> temp = new List<Campaign>();
+            IEnumerable<Campaign> temp = null;
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -116,7 +116,7 @@ namespace DataAccesLayer
             );
         }
 
-        internal static List<Campaign> BuildObjects(SqlDataReader reader)
+        internal static IEnumerable<Campaign> BuildObjects(SqlDataReader reader)
         {
             List<Campaign> temp = new List<Campaign>();
 

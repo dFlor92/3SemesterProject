@@ -9,6 +9,7 @@ namespace Core
     {
         [DataMember]
         public int Id { get; set; }
+
         [DataMember]
         public string Name { get; set; }
 
@@ -16,13 +17,15 @@ namespace Core
         public string Email { get; set; }
 
         [DataMember]
+        public string Phone { get; set; }
+
+        [DataMember]
+        public string Password { get; set; }
+
+        [DataMember]
         public Role Role { get; set; }
 
-        public SystemUser(int id)
-        {
-            this.Id = id;
-        }
-        public SystemUser(int id, string name, string email, Role role)
+        public SystemUser(int id, string name, string email, string phone, string password, Role role)
         {
             this.Id = id;
             this.Name = name;

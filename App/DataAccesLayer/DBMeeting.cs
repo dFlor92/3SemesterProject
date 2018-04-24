@@ -15,7 +15,7 @@ namespace DataAccesLayer
 
         public IEnumerable<Meeting> All()
         {
-            List<Meeting> temp = new List<Meeting>();
+            IEnumerable<Meeting> temp = null;
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -121,14 +121,14 @@ namespace DataAccesLayer
             return new Meeting(
                 reader.GetInt32(reader.GetOrdinal("meeting_id")),
                 reader.GetDateTime(reader.GetOrdinal("meeting_date")),
-                reader.GetInt32(reader.GetOrdinal("meeting_type")),
-                reader.GetInt32(reader.GetOrdinal("meeting_status")),
+                (Core.Type)Enum.Parse(typeof(Core.Type), reader.GetInt32(reader.GetOrdinal("meeting_type")).ToString()), // This is an int that needs to be an enum so we cast it to a role
+                (Core.Status)Enum.Parse(typeof(Core.Status), reader.GetInt32(reader.GetOrdinal("meeting_status")).ToString()), // This is an int that needs to be an enum so we cast it to a role
                 DBAgent.BuildObject(reader),
                 DBSession.BuildObject(reader)
             );
         }
 
-        internal static List<Meeting> BuildObjects(SqlDataReader reader)
+        internal static IEnumerable<Meeting> BuildObjects(SqlDataReader reader)
         {
             List<Meeting> temp = new List<Meeting>();
 
