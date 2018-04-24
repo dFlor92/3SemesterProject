@@ -3,7 +3,10 @@
     "",
     "\\App",
     "\\App\\BusinessLogic",
-    "\\App\\Core"
+    "\\App\\BusinessLogic\\bin",
+    "\\App\\Core",
+    "\\App\\NobiService",
+    "\\App\\ServiceHost"
   ],
   "SelectedNode": "\\App\\BusinessLogic\\SystemUserController.cs",
   "PreviewInSolutionExplorer": false
