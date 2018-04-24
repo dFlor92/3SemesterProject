@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="af133cf3-7bbc-4adc-963e-8125cb623405" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/NobiService/Session/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="2050bd19-619d-419f-9fce-88da404f3c4f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/NobiService/Session/?disco" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="84c9e078-d7ef-4fb7-8be4-b38c55f133ab" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/NobiService/Session/?xsd=xsd1" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="bf7e886b-d9ea-444b-b671-c9f7c713c5e2" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/NobiService/Session/?xsd=xsd2" />
+    <MetadataFile FileName="SessionService.wsdl" MetadataType="Wsdl" ID="3d171589-d7a2-49a1-bc55-b45fc1459ff3" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/NobiService/Session/?wsdl" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="b6f50164-3b65-49b4-831a-6e1b49e5a613" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/NobiService/Session/?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

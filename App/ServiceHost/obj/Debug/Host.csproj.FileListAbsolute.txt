@@ -46,3 +46,4 @@ C:\Users\1065490\Source\Repos\3SemesterProject\App\ServiceHost\obj\Debug\Host.cs
 C:\Users\1065490\Source\Repos\3SemesterProject\App\ServiceHost\obj\Debug\Host.csproj.CopyComplete
 C:\Users\1065490\Source\Repos\3SemesterProject\App\ServiceHost\obj\Debug\ServiceHost.exe
 C:\Users\1065490\Source\Repos\3SemesterProject\App\ServiceHost\obj\Debug\ServiceHost.pdb
+C:\Users\Watten\Source\Repos\3SemesterProject\App\ServiceHost\bin\Debug\NobiService.dll.config

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="685963af-8a79-4cfb-ae6e-9d5719491f07" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/NobiService/Lead/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="a7bba093-b8a0-459f-ab28-aabacc7d6339" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/NobiService/Lead/?xsd=xsd1" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="752ca290-8bb1-4436-bbe3-e31a37fc8a5c" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/NobiService/Lead/?xsd=xsd0" />
+    <MetadataFile FileName="LeadService.wsdl" MetadataType="Wsdl" ID="2b0bc7c0-102a-4e95-9aa8-7516dac4b883" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/NobiService/Lead/?wsdl" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="abbe2ce8-0fad-4af0-8038-f8155199602e" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/NobiService/Lead/?xsd=xsd2" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="98fa1329-54bb-45a5-b6cb-917208f3a62c" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/NobiService/Lead/?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

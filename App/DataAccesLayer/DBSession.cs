@@ -44,7 +44,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "INSERT INTO Session (date, duration, systemUserId, leadId) VALUES (@date, @duration, @systemUserId, @leadId)";
+                    cmd.CommandText = "INSERT INTO Session (session_date, session_duration, session_systemUserId, session_leadId) VALUES (@date, @duration, @systemUserId, @leadId)";
                     cmd.Parameters.AddWithValue("@name", entity.Date);
                     cmd.Parameters.AddWithValue("@description", entity.Duration);
                     cmd.Parameters.AddWithValue("@systemUserId", entity.SystemUser.Id);
@@ -63,7 +63,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "DELETE FROM Session WHERE id = @id";
+                    cmd.CommandText = "DELETE FROM Session WHERE session_id = @id";
                     cmd.Parameters.AddWithValue("@id", id);
                     cmd.ExecuteNonQuery();
                 }
@@ -79,7 +79,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM Session WHERE id = @id";
+                    cmd.CommandText = "SELECT * FROM Session WHERE session_id = @id";
                     cmd.Parameters.AddWithValue("@id", id);
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
@@ -102,7 +102,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "UPDATE Session SET(date = @date, duration = @duration, systemUserId = @systemUserId, leadId = @leadId) WHERE id = @id";
+                    cmd.CommandText = "UPDATE Session SET(session_date = @date, session_duration = @duration, session_systemUserId = @systemUserId, leadId = @leadId) WHERE session_id = @id";
                     cmd.Parameters.AddWithValue("@name", entity.Date);
                     cmd.Parameters.AddWithValue("@description", entity.Duration);
                     cmd.Parameters.AddWithValue("@systemUserId", entity.SystemUser.Id);
@@ -111,18 +111,18 @@ namespace DataAccesLayer
                 }
             }
         }
-        private Session BuildObject(SqlDataReader reader)
+        internal static Session BuildObject(SqlDataReader reader)
         {
             return new Session(
-                reader.GetInt32(0),
-                reader.GetDateTime(1),
-                reader.GetTimeSpan(2),
-                new SystemUser(reader.GetInt32(3)),
-                new Lead(reader.GetInt32(4))
+                reader.GetInt32(reader.GetOrdinal("session_id")),
+                reader.GetDateTime(reader.GetOrdinal("session_start")),
+                reader.GetDateTime(reader.GetOrdinal("session_end")),
+                DBSystemUser.BuildObject(reader),
+                DBLead.BuildObject(reader)
             );
         }
 
-        private List<Session> BuildObjects(SqlDataReader reader)
+        internal static List<Session> BuildObjects(SqlDataReader reader)
         {
             List<Session> temp = new List<Session>();
 

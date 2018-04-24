@@ -10,14 +10,36 @@ namespace Host
 {
     class Program
     {
+        // Temporary solution!
+        // Creates a Dictionary<string, ServiceHost>
         static void Main(string[] args)
         {
-            using (ServiceHost host = new ServiceHost(typeof(AgentService)))
+            Dictionary<string, ServiceHost> hosts = new Dictionary<string, ServiceHost>();
+
+            // Populate with names and instances
+            hosts.Add("AgentService", new ServiceHost(typeof(AgentService)));
+            hosts.Add("MeetingService", new ServiceHost(typeof(MeetingService)));
+            hosts.Add("CampaignService", new ServiceHost(typeof(CampaignService)));
+            hosts.Add("LeadService", new ServiceHost(typeof(LeadService)));
+            hosts.Add("SessionService", new ServiceHost(typeof(SessionService)));
+            hosts.Add("SystemUserService", new ServiceHost(typeof(SystemUserService)));
+
+            // Open all hosts
+            foreach (var host in hosts)
             {
-                host.Open();
-                Console.WriteLine("Press any key to kill host...");
-                Console.ReadLine();
+                host.Value.Open();
             }
+
+            // Wait for user action
+            Console.WriteLine("\nPress any key to terminate all services..");
+            Console.ReadLine();
+
+            // Close all hosts
+            foreach (var host in hosts)
+            {
+                host.Value.Close();
+            }
+
         }
     }
 }

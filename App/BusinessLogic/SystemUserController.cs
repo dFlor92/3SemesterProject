@@ -10,31 +10,31 @@ namespace BusinessLogic
 {
     public class SystemUserController : IDatabaseCRUD<SystemUser>
     {
-        DBSystemUser dbSystemUser = new DBSystemUser();
+        private DBSystemUser db = new DBSystemUser();
         public IEnumerable<SystemUser> All()
         {
-            return dbSystemUser.All();
+            return db.All();
         }
 
         public void Create(SystemUser entity)
         {
-            dbSystemUser.Create(entity);
+            db.Create(entity);
         }
 
         public void Delete(int id)
         {
-            dbSystemUser.Delete(id);
+            db.Delete(id);
         }
 
         public SystemUser Read(int id)
         {
-            return dbSystemUser.Read(id);
+            return db.Read(id);
             
         }
 
         public void Update(SystemUser entity)
         {
-            dbSystemUser.Update(entity);
+            db.Update(entity);
         }
     }
 }

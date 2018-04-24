@@ -22,14 +22,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT agent.id as agent_id," +
-                        "agent.name as agent_name," +
-                        "agent.email as agent_email," +
-                        "agent.phone as agent_phone," +
-                        "campaign.id as campaign_id," +
-                        "campaign.name as campaign_name," +
-                        "campaign.description as campaign_description" +
-                        " FROM Agent JOIN Campaign ON (Campaign.id = Agent.campaignId)";
+                    cmd.CommandText = "SELECT * FROM Agent JOIN Campaign ON (campaign_id = agent_campaignId)";
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
@@ -51,7 +44,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "INSERT INTO Agent (name, email, campaign) VALUES (@name, @email, @campaign)";
+                    cmd.CommandText = "INSERT INTO Agent (agent_name, agent_email, agent_campaign) VALUES (@name, @email, @campaign)";
                     cmd.Parameters.AddWithValue("@name", entity.Name);
                     cmd.Parameters.AddWithValue("@email", entity.Email);
                     cmd.Parameters.AddWithValue("@campaign", entity.Campaign);
@@ -67,7 +60,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "DELETE FROM Agent WHERE id = @id";
+                    cmd.CommandText = "DELETE FROM Agent WHERE agent_id = @id";
                     cmd.Parameters.AddWithValue("@id", id);
                     cmd.ExecuteNonQuery();
                 }
@@ -83,14 +76,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT agent.id as agent_id," +
-                        "agent.name as agent_name," +
-                        "agent.email as agent_email," +
-                        "agent.phone as agent_phone," +
-                        "campaign.id as campaign_id," +
-                        "campaign.name as campaign_name," +
-                        "campaign.description as campaign_description" +
-                        " FROM Agent JOIN Campaign ON (campaign.id = agent.campaignId) WHERE agent.id = @id";
+                    cmd.CommandText = "SELECT * FROM Agent JOIN Campaign ON (campaign_id = agent_campaignId) WHERE agent_id = @id";
                     cmd.Parameters.AddWithValue("@id", id);
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
@@ -113,7 +99,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "UPDATE Agent SET(name = @name, email = @email, campaign = @campaign) WHERE id = @id";
+                    cmd.CommandText = "UPDATE Agent SET(agent_name = @name, agent_email = @email, agent_campaign = @campaign) WHERE agent_id = @id";
                     cmd.Parameters.AddWithValue("@name", entity.Name);
                     cmd.Parameters.AddWithValue("@email", entity.Email);
                     cmd.Parameters.AddWithValue("@campaign", entity.Campaign);
@@ -123,7 +109,7 @@ namespace DataAccesLayer
             }
         }
 
-        public Agent BuildObject(SqlDataReader reader)
+        internal static Agent BuildObject(SqlDataReader reader)
         {
             Campaign temp = DBCampaign.BuildObject(reader);
             return new Agent(
@@ -135,7 +121,7 @@ namespace DataAccesLayer
             );
         }
 
-        private IEnumerable<Agent> BuildObjects(SqlDataReader reader)
+        internal static IEnumerable<Agent> BuildObjects(SqlDataReader reader)
         {
             List<Agent> temp = new List<Agent>();
 

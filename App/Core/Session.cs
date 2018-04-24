@@ -12,7 +12,7 @@ namespace Core
         [DataMember]
         public DateTime Date { get; set; }
         [DataMember]
-        public TimeSpan Duration { get; set; }
+        public DateTime Duration { get; set; }
         [DataMember]
         public SystemUser SystemUser { get; set; }
         [DataMember]
@@ -22,7 +22,7 @@ namespace Core
 	    {
             this.Id = id;
 	    }
-        public Session(int id, DateTime date, TimeSpan duration, SystemUser systemUser, Lead lead)
+        public Session(int id, DateTime date, DateTime duration, SystemUser systemUser, Lead lead)
         {
             this.Id = id;
             this.Date = date;

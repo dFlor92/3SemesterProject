@@ -10,30 +10,30 @@ namespace BusinessLogic
 {
     public class MeetingController : IDatabaseCRUD<Meeting>
     {
-        DBMeeting dbMeeting = new DBMeeting();
+        private DBMeeting db = new DBMeeting();
         public IEnumerable<Meeting> All()
         {
-            return dbMeeting.All();
+            return db.All();
         }
 
         public void Create(Meeting entity)
         {
-            dbMeeting.Create(entity);
+            db.Create(entity);
         }
 
         public void Delete(int id)
         {
-            dbMeeting.Delete(id);
+            db.Delete(id);
         }
 
         public Meeting Read(int id)
         {
-           return dbMeeting.Read(id);
+           return db.Read(id);
         }
 
         public void Update(Meeting entity)
         {
-            dbMeeting.Update(entity);
+            db.Update(entity);
         }
     }
 }

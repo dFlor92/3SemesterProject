@@ -22,10 +22,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT campaign.id as campaign_id," +
-                        "campaign.name as campaign_name" +
-                        "campaign.description as campaign_description" +
-                        " FROM Campaign";
+                    cmd.CommandText = "SELECT * FROM Campaign";
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
@@ -47,7 +44,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "INSERT INTO Campaign (name, description) VALUES (@name, @description)";
+                    cmd.CommandText = "INSERT INTO Campaign (campaign_name, campaign_description) VALUES (@name, @description)";
                     cmd.Parameters.AddWithValue("@name", entity.Name);
                     cmd.Parameters.AddWithValue("@description", entity.Description);
                     cmd.ExecuteNonQuery();
@@ -62,7 +59,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "DELETE FROM Campaign WHERE id = @id";
+                    cmd.CommandText = "DELETE FROM Campaign WHERE campaign_id = @id";
                     cmd.Parameters.AddWithValue("@id", id);
                     cmd.ExecuteNonQuery();
                 }
@@ -78,10 +75,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT campaign.id as campaign_id," +
-                        "campaign.name as campaign_name" +
-                        "campaign.description as campaign_description" +
-                        " FROM Campaign WHERE campaign.id = @id";
+                    cmd.CommandText = "SELECT * FROM Campaign WHERE campaign_id = @id";
                     cmd.Parameters.AddWithValue("@id", id);
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
@@ -104,7 +98,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "UPDATE Campaign SET(name = @name, description = @description) WHERE id = @id";
+                    cmd.CommandText = "UPDATE Campaign SET(campaign_name = @name, campaign_description = @description) WHERE campaign_id = @id";
                     cmd.Parameters.AddWithValue("@name", entity.Name);
                     cmd.Parameters.AddWithValue("@description", entity.Description);
                     cmd.Parameters.AddWithValue("@id", entity.Id);

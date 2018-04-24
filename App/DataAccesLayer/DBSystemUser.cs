@@ -28,7 +28,7 @@ namespace DataAccesLayer
                     {
                         if (reader.HasRows)
                         {
-                            temp = BuildMany(reader);
+                            temp = BuildObjects(reader);
                         }
                     }
                 }
@@ -85,7 +85,7 @@ namespace DataAccesLayer
                     {
                         if (reader.HasRows)
                         {
-                            temp = build(reader);
+                            temp = BuildObject(reader);
                         }
                     }
                 }
@@ -111,7 +111,7 @@ namespace DataAccesLayer
             }
         }
 
-        private SystemUser build(SqlDataReader reader)
+        internal static SystemUser BuildObject(SqlDataReader reader)
         {
             return new SystemUser(
                 reader.GetInt32(0),
@@ -121,13 +121,13 @@ namespace DataAccesLayer
             );
         }
 
-        private List<SystemUser> BuildMany(SqlDataReader reader)
+        internal static List<SystemUser> BuildObjects(SqlDataReader reader)
         {
             List<SystemUser> temp = new List<SystemUser>();
 
             while (reader.Read())
             {
-                temp.Add(build(reader));
+                temp.Add(BuildObject(reader));
             }
 
             return temp;

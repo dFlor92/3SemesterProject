@@ -10,13 +10,7 @@ namespace BusinessLogic
 {
     public class AgentController : IDatabaseCRUD<Agent>
     {
-        private IDatabaseCRUD<Agent> db;
-        
-
-        public AgentController()
-        {
-            db =  new DBAgent();
-        }
+        private DBAgent db = new DBAgent();        
 
         public IEnumerable<Agent> All()
         {

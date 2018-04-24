@@ -2,13 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\App",
-    "\\App\\DataAccesLayer",
-    "\\App\\ServiceHost",
-    "\\Client",
-    "\\Client\\NobiWinClient",
-    "\\Client\\WebClient",
-    "\\Client\\WebClient\\Controllers"
+    "\\App\\BusinessLogic",
+    "\\App\\Core"
   ],
-  "SelectedNode": "\\Client\\WebClient\\Controllers\\AgentController.cs",
+  "SelectedNode": "\\App\\BusinessLogic\\SystemUserController.cs",
   "PreviewInSolutionExplorer": false
 }

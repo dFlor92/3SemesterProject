@@ -10,30 +10,30 @@ namespace BusinessLogic
 {
     public class SessionController : IDatabaseCRUD<Session>
     {
-        DBSession dbSession = new DBSession();
+        private DBSession db = new DBSession();
         public IEnumerable<Session> All()
         {
-            return dbSession.All();
+            return db.All();
         }
 
         public void Create(Session entity)
         {
-            dbSession.Create(entity);
+            db.Create(entity);
         }
 
         public void Delete(int id)
         {
-            dbSession.Delete(id);
+            db.Delete(id);
         }
 
         public Session Read(int id)
         {
-            return dbSession.Read(id);
+            return db.Read(id);
         }
 
         public void Update(Session entity)
         {
-            dbSession.Update(entity);
+            db.Update(entity);
         }
     }
 }
