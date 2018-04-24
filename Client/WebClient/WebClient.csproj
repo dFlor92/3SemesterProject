@@ -144,7 +144,32 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Connected Services\AgentServiceWeb\Reference.cs">
+    <Compile Include="Connected Services\AgentService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CampaignService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\LeadService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\MeetingService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\SessionService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\SystemUserService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -158,11 +183,89 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\AgentServiceWeb\AgentService.wsdl" />
-    <None Include="Connected Services\AgentServiceWeb\item.disco" />
-    <None Include="Connected Services\AgentServiceWeb\configuration91.svcinfo" />
-    <None Include="Connected Services\AgentServiceWeb\configuration.svcinfo" />
-    <None Include="Connected Services\AgentServiceWeb\Reference.svcmap">
+    <None Include="Connected Services\AgentService\AgentService.wsdl" />
+    <None Include="Connected Services\AgentService\item.disco" />
+    <None Include="Connected Services\AgentService\configuration91.svcinfo" />
+    <None Include="Connected Services\AgentService\configuration.svcinfo" />
+    <None Include="Connected Services\AgentService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\AgentService\WebClient.AgentService.Agent.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\CampaignService\CampaignService.wsdl" />
+    <None Include="Connected Services\CampaignService\item.disco" />
+    <None Include="Connected Services\CampaignService\configuration91.svcinfo" />
+    <None Include="Connected Services\CampaignService\configuration.svcinfo" />
+    <None Include="Connected Services\CampaignService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\LeadService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LeadService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LeadService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LeadService\LeadService.wsdl" />
+    <Content Include="Connected Services\LeadService\WebClient.LeadService.Lead.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\MeetingService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MeetingService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MeetingService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MeetingService\MeetingService.wsdl" />
+    <None Include="Connected Services\LeadService\item.disco" />
+    <None Include="Connected Services\LeadService\configuration91.svcinfo" />
+    <None Include="Connected Services\LeadService\configuration.svcinfo" />
+    <None Include="Connected Services\LeadService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\MeetingService\WebClient.MeetingService.Meeting.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\SessionService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SessionService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SessionService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SessionService\SessionService.wsdl" />
+    <None Include="Connected Services\MeetingService\item.disco" />
+    <None Include="Connected Services\MeetingService\configuration91.svcinfo" />
+    <None Include="Connected Services\MeetingService\configuration.svcinfo" />
+    <None Include="Connected Services\MeetingService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\SessionService\WebClient.SessionService.Session.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\SystemUserService\item.disco" />
+    <None Include="Connected Services\SystemUserService\configuration91.svcinfo" />
+    <None Include="Connected Services\SystemUserService\configuration.svcinfo" />
+    <None Include="Connected Services\SystemUserService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\SessionService\item.disco" />
+    <None Include="Connected Services\SessionService\configuration91.svcinfo" />
+    <None Include="Connected Services\SessionService\configuration.svcinfo" />
+    <None Include="Connected Services\SessionService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -177,16 +280,38 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Connected Services\AgentServiceWeb\item.xsd">
+    <None Include="Connected Services\AgentService\item.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\AgentServiceWeb\item1.xsd">
+    <None Include="Connected Services\AgentService\item1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\AgentServiceWeb\item2.xsd">
+    <None Include="Connected Services\AgentService\item2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Connected Services\AgentServiceWeb\WebClient.AgentServiceWeb.Agent.datasource">
+    <None Include="Connected Services\CampaignService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CampaignService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CampaignService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\CampaignService\WebClient.CampaignService.Campaign.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\SystemUserService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SystemUserService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SystemUserService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SystemUserService\SystemUserService.wsdl" />
+    <Content Include="Connected Services\SystemUserService\WebClient.SystemUserService.SystemUser.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -239,7 +364,12 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\AgentServiceWeb\" />
+    <WCFMetadataStorage Include="Connected Services\AgentService\" />
+    <WCFMetadataStorage Include="Connected Services\CampaignService\" />
+    <WCFMetadataStorage Include="Connected Services\LeadService\" />
+    <WCFMetadataStorage Include="Connected Services\MeetingService\" />
+    <WCFMetadataStorage Include="Connected Services\SessionService\" />
+    <WCFMetadataStorage Include="Connected Services\SystemUserService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

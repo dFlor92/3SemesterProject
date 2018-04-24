@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebClient.AgentServiceWeb {
+namespace WebClient.AgentService {
     using System.Runtime.Serialization;
     using System;
     
@@ -23,7 +23,7 @@ namespace WebClient.AgentServiceWeb {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WebClient.AgentServiceWeb.Campaign CampaignField;
+        private WebClient.AgentService.Campaign CampaignField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string EmailField;
@@ -48,7 +48,7 @@ namespace WebClient.AgentServiceWeb {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WebClient.AgentServiceWeb.Campaign Campaign {
+        public WebClient.AgentService.Campaign Campaign {
             get {
                 return this.CampaignField;
             }
@@ -200,32 +200,32 @@ namespace WebClient.AgentServiceWeb {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AgentServiceWeb.IAgentService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AgentService.IAgentService")]
     public interface IAgentService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgentService/All", ReplyAction="http://tempuri.org/IAgentService/AllResponse")]
-        WebClient.AgentServiceWeb.Agent[] All();
+        WebClient.AgentService.Agent[] All();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgentService/All", ReplyAction="http://tempuri.org/IAgentService/AllResponse")]
-        System.Threading.Tasks.Task<WebClient.AgentServiceWeb.Agent[]> AllAsync();
+        System.Threading.Tasks.Task<WebClient.AgentService.Agent[]> AllAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgentService/Create", ReplyAction="http://tempuri.org/IAgentService/CreateResponse")]
-        void Create(WebClient.AgentServiceWeb.Agent entity);
+        void Create(WebClient.AgentService.Agent entity);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgentService/Create", ReplyAction="http://tempuri.org/IAgentService/CreateResponse")]
-        System.Threading.Tasks.Task CreateAsync(WebClient.AgentServiceWeb.Agent entity);
+        System.Threading.Tasks.Task CreateAsync(WebClient.AgentService.Agent entity);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgentService/Read", ReplyAction="http://tempuri.org/IAgentService/ReadResponse")]
-        WebClient.AgentServiceWeb.Agent Read(int id);
+        WebClient.AgentService.Agent Read(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgentService/Read", ReplyAction="http://tempuri.org/IAgentService/ReadResponse")]
-        System.Threading.Tasks.Task<WebClient.AgentServiceWeb.Agent> ReadAsync(int id);
+        System.Threading.Tasks.Task<WebClient.AgentService.Agent> ReadAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgentService/Update", ReplyAction="http://tempuri.org/IAgentService/UpdateResponse")]
-        void Update(WebClient.AgentServiceWeb.Agent entity);
+        void Update(WebClient.AgentService.Agent entity);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgentService/Update", ReplyAction="http://tempuri.org/IAgentService/UpdateResponse")]
-        System.Threading.Tasks.Task UpdateAsync(WebClient.AgentServiceWeb.Agent entity);
+        System.Threading.Tasks.Task UpdateAsync(WebClient.AgentService.Agent entity);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgentService/Delete", ReplyAction="http://tempuri.org/IAgentService/DeleteResponse")]
         void Delete(int id);
@@ -235,12 +235,12 @@ namespace WebClient.AgentServiceWeb {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IAgentServiceChannel : WebClient.AgentServiceWeb.IAgentService, System.ServiceModel.IClientChannel {
+    public interface IAgentServiceChannel : WebClient.AgentService.IAgentService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class AgentServiceClient : System.ServiceModel.ClientBase<WebClient.AgentServiceWeb.IAgentService>, WebClient.AgentServiceWeb.IAgentService {
+    public partial class AgentServiceClient : System.ServiceModel.ClientBase<WebClient.AgentService.IAgentService>, WebClient.AgentService.IAgentService {
         
         public AgentServiceClient() {
         }
@@ -261,35 +261,35 @@ namespace WebClient.AgentServiceWeb {
                 base(binding, remoteAddress) {
         }
         
-        public WebClient.AgentServiceWeb.Agent[] All() {
+        public WebClient.AgentService.Agent[] All() {
             return base.Channel.All();
         }
         
-        public System.Threading.Tasks.Task<WebClient.AgentServiceWeb.Agent[]> AllAsync() {
+        public System.Threading.Tasks.Task<WebClient.AgentService.Agent[]> AllAsync() {
             return base.Channel.AllAsync();
         }
         
-        public void Create(WebClient.AgentServiceWeb.Agent entity) {
+        public void Create(WebClient.AgentService.Agent entity) {
             base.Channel.Create(entity);
         }
         
-        public System.Threading.Tasks.Task CreateAsync(WebClient.AgentServiceWeb.Agent entity) {
+        public System.Threading.Tasks.Task CreateAsync(WebClient.AgentService.Agent entity) {
             return base.Channel.CreateAsync(entity);
         }
         
-        public WebClient.AgentServiceWeb.Agent Read(int id) {
+        public WebClient.AgentService.Agent Read(int id) {
             return base.Channel.Read(id);
         }
         
-        public System.Threading.Tasks.Task<WebClient.AgentServiceWeb.Agent> ReadAsync(int id) {
+        public System.Threading.Tasks.Task<WebClient.AgentService.Agent> ReadAsync(int id) {
             return base.Channel.ReadAsync(id);
         }
         
-        public void Update(WebClient.AgentServiceWeb.Agent entity) {
+        public void Update(WebClient.AgentService.Agent entity) {
             base.Channel.Update(entity);
         }
         
-        public System.Threading.Tasks.Task UpdateAsync(WebClient.AgentServiceWeb.Agent entity) {
+        public System.Threading.Tasks.Task UpdateAsync(WebClient.AgentService.Agent entity) {
             return base.Channel.UpdateAsync(entity);
         }
         
