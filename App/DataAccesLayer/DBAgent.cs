@@ -33,8 +33,8 @@ namespace DataAccesLayer
                         "campaign.description as campaign_description " +
                         "FROM Agent " +
                         "JOIN Campaign " +
-                        "ON (campaign.id = agent.campaignId) " +
-                        "WHERE agent.id = @id";
+                        "ON (campaign.id = agent.campaignId) ";
+      
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {

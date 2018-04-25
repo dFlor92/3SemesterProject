@@ -44,18 +44,34 @@
             this.agentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dmaa02171065555DataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.agentBindingSource8 = new System.Windows.Forms.BindingSource(this.components);
+            this.agentBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
+            this.agentBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
+            this.agentBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.agentBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.agentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.agentBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.iAgentServiceChannelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.agentBindingSource7 = new System.Windows.Forms.BindingSource(this.components);
+            this.agentBindingSource9 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.agentBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.agentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dmaa02171065555DataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iAgentServiceChannelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource9)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -174,12 +190,51 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
-            this.dataGridView1.DataSource = this.agentBindingSource2;
+            this.dataGridView1.DataSource = this.agentBindingSource3;
             this.dataGridView1.Location = new System.Drawing.Point(193, 11);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(554, 494);
+            this.dataGridView1.Size = new System.Drawing.Size(668, 494);
             this.dataGridView1.TabIndex = 16;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // agentBindingSource8
+            // 
+            this.agentBindingSource8.DataSource = typeof(NobiWinClient.AgentService.Agent);
+            // 
+            // agentBindingSource6
+            // 
+            this.agentBindingSource6.DataSource = typeof(NobiWinClient.AgentService.Agent);
+            // 
+            // agentBindingSource5
+            // 
+            this.agentBindingSource5.DataSource = typeof(NobiWinClient.AgentService.Agent);
+            // 
+            // agentBindingSource3
+            // 
+            this.agentBindingSource3.DataSource = typeof(NobiWinClient.AgentService.Agent);
+            // 
+            // agentBindingSource2
+            // 
+            this.agentBindingSource2.DataSource = typeof(NobiWinClient.AgentService.Agent);
+            // 
+            // agentBindingSource1
+            // 
+            this.agentBindingSource1.DataSource = typeof(NobiWinClient.AgentService.Agent);
+            // 
+            // agentBindingSource4
+            // 
+            this.agentBindingSource4.DataSource = typeof(NobiWinClient.AgentService.Agent);
+            // 
+            // iAgentServiceChannelBindingSource
+            // 
+            this.iAgentServiceChannelBindingSource.DataSource = typeof(NobiWinClient.AgentService.IAgentServiceChannel);
+            // 
+            // agentBindingSource7
+            // 
+            this.agentBindingSource7.DataSource = typeof(NobiWinClient.AgentService.Agent);
+            // 
+            // agentBindingSource9
+            // 
+            this.agentBindingSource9.DataSource = typeof(NobiWinClient.AgentService.Agent);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -211,19 +266,11 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Phone";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // agentBindingSource2
-            // 
-            this.agentBindingSource2.DataSource = typeof(NobiWinClient.AgentService.Agent);
-            // 
-            // agentBindingSource1
-            // 
-            this.agentBindingSource1.DataSource = typeof(NobiWinClient.AgentService.Agent);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(777, 536);
+            this.ClientSize = new System.Drawing.Size(897, 536);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtRefresh);
             this.Controls.Add(this.txt5);
@@ -244,8 +291,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dmaa02171065555DataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iAgentServiceChannelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,20 +323,27 @@
         private System.Windows.Forms.Button txtRefresh;
      
         private System.Windows.Forms.BindingSource dmaa02171065555DataSet1BindingSource;
-    
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn campaignDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource agentBindingSource1;
+        private System.Windows.Forms.BindingSource agentBindingSource2;
+        private System.Windows.Forms.BindingSource agentBindingSource3;
+        private System.Windows.Forms.BindingSource agentBindingSource5;
+        private System.Windows.Forms.BindingSource agentBindingSource4;
+        private System.Windows.Forms.BindingSource iAgentServiceChannelBindingSource;
+        private System.Windows.Forms.BindingSource agentBindingSource6;
+        private System.Windows.Forms.BindingSource agentBindingSource7;
+        private System.Windows.Forms.BindingSource agentBindingSource8;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource agentBindingSource9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.BindingSource agentBindingSource2;
     }
 }
 

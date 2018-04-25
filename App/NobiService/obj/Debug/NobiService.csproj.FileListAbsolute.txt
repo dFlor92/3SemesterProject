@@ -52,3 +52,4 @@ C:\Users\Anonymous\Source\Repos\3SemesterProject\App\NobiService\obj\Debug\NobiS
 C:\Users\Anonymous\Source\Repos\3SemesterProject\App\NobiService\obj\Debug\NobiService.csproj.CopyComplete
 C:\Users\Anonymous\Source\Repos\3SemesterProject\App\NobiService\obj\Debug\NobiService.dll
 C:\Users\Anonymous\Source\Repos\3SemesterProject\App\NobiService\obj\Debug\NobiService.pdb
+C:\Users\Daniel\Source\Repos\3SemesterProject\App\NobiService\bin\Debug\NobiService.dll.config

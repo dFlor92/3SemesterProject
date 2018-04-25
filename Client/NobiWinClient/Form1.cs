@@ -44,53 +44,48 @@ namespace NobiWinClient
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void txtRefresh_Click(object sender, EventArgs e)
         {
             AgentDataSet();
         }
 
+       
         private void AgentDataSet()
         {
             AgentServiceClient client = new AgentServiceClient();
 
             IEnumerable<Agent> agents = client.All();
-
+        
             dataGridView1.DataSource = agents;
-            //    DataGridViewRow row = dataGridView1.Rows[0];
-            //    if (agents != null)
-            //       foreach (Agent agent in agents)
 
-            //        {
-            //            row.Cells[0].Value = agent.Id;
-            //            row.Cells[1].Value = agent.Name;
-            //            row.Cells[2].Value = agent.Email;
-            //            row.Cells[3].Value = agent.Phone;
-            //          row.Cells[4].Value = agent.Campaign.Name;
-            //            //... lot more properties
-            //         }
 
-            //        else
-            //        {
-            //            MessageBox.Show("Der findes ingen agent med id: " + txt1.Text);
-            //        }
+            // THE SOLUTION DOES NOT WORK WHEN THE DATAGRIDVIEW IS DATA-BOUND!
+            // DataGridViewRow row = dataGridView1.Rows[0];
+            // if (agents != null)
+            //    foreach (Agent agent in agents)
 
+            //    {
+
+            //         row.Cells[2].Value = agent.Id;
+            //         row.Cells[3].Value = agent.Name;
+            //         row.Cells[1].Value = agent.Email;
+            //         row.Cells[4].Value = agent.Phone;
+            //         row.Cells[0].Value = agent.Campaign.Name;
+            //         dataGridView1.Rows.Add();
+            // }
+
+            //    else
+            //     {
+            //         MessageBox.Show("Der findes ingen agent med id: " + txt1.Text);
             //    }
+
+            //}
 
             //}
 
         }
 
-        
+
     }
 }
 
