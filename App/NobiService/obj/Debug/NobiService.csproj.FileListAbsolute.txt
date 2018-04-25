@@ -38,3 +38,17 @@ C:\Users\1065490\Source\Repos\3SemesterProject\App\NobiService\obj\Debug\NobiSer
 C:\Users\1065490\Source\Repos\3SemesterProject\App\NobiService\obj\Debug\NobiService.dll
 C:\Users\1065490\Source\Repos\3SemesterProject\App\NobiService\obj\Debug\NobiService.pdb
 C:\Users\Watten\Source\Repos\3SemesterProject\App\NobiService\bin\Debug\NobiService.dll.config
+C:\Users\Anonymous\Source\Repos\3SemesterProject\App\NobiService\bin\Debug\NobiService.dll.config
+C:\Users\Anonymous\Source\Repos\3SemesterProject\App\NobiService\bin\Debug\NobiService.dll
+C:\Users\Anonymous\Source\Repos\3SemesterProject\App\NobiService\bin\Debug\NobiService.pdb
+C:\Users\Anonymous\Source\Repos\3SemesterProject\App\NobiService\bin\Debug\BusinessLogic.dll
+C:\Users\Anonymous\Source\Repos\3SemesterProject\App\NobiService\bin\Debug\Core.dll
+C:\Users\Anonymous\Source\Repos\3SemesterProject\App\NobiService\bin\Debug\DataAccesLayer.dll
+C:\Users\Anonymous\Source\Repos\3SemesterProject\App\NobiService\bin\Debug\BusinessLogic.pdb
+C:\Users\Anonymous\Source\Repos\3SemesterProject\App\NobiService\bin\Debug\Core.pdb
+C:\Users\Anonymous\Source\Repos\3SemesterProject\App\NobiService\bin\Debug\DataAccesLayer.pdb
+C:\Users\Anonymous\Source\Repos\3SemesterProject\App\NobiService\obj\Debug\NobiService.csprojResolveAssemblyReference.cache
+C:\Users\Anonymous\Source\Repos\3SemesterProject\App\NobiService\obj\Debug\NobiService.csproj.CoreCompileInputs.cache
+C:\Users\Anonymous\Source\Repos\3SemesterProject\App\NobiService\obj\Debug\NobiService.csproj.CopyComplete
+C:\Users\Anonymous\Source\Repos\3SemesterProject\App\NobiService\obj\Debug\NobiService.dll
+C:\Users\Anonymous\Source\Repos\3SemesterProject\App\NobiService\obj\Debug\NobiService.pdb

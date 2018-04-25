@@ -3,11 +3,9 @@
     "",
     "\\App",
     "\\App\\BusinessLogic",
-    "\\App\\BusinessLogic\\bin",
     "\\App\\Core",
-    "\\App\\NobiService",
-    "\\App\\ServiceHost"
+    "\\App\\DataAccesLayer"
   ],
-  "SelectedNode": "\\App\\BusinessLogic\\SystemUserController.cs",
+  "SelectedNode": "\\App\\DataAccesLayer\\DBCampaign.cs",
   "PreviewInSolutionExplorer": false
 }

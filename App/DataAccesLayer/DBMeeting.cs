@@ -22,7 +22,41 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM Meeting";
+                    cmd.CommandText = "SELECT meeting.id as meeting_id," +
+                        "meeting.date as meeting_date," +
+                        "meeting.type as meeting_type," +
+                        "meeting.status as meeting_status," +
+                        "meeting.agentId as meeting_agentId," +
+                        "meeting.sessionId as meeting_sessionId," +
+                        "agent.id as agent_id," +
+                        "agent.name as agent_name," +
+                        "agent.email as agent_email," +
+                        "agent.phone as agent_phone," +
+                        "agent.campaignId as agent_campaignId," +
+                        "campaign.id as campaign_id," +
+                        "campaign.name as campaign_name," +
+                        "campaign.description as campaign_description," +
+                        "session.id as session_id," +
+                        "session.start as session_start," +
+                        "session.end as session_end," +
+                        "session.systemUserId as session_systemUserId," +
+                        "session.leadId as session_leadId," +
+                        "systemUser.id as systemUser_id," +
+                        "systemUser.name as systemUser_name," +
+                        "systemUser.email as systemUser_email," +
+                        "systemUser.phone as systemUser_phone," +
+                        "systemUser.password as systemUser_password," +
+                        "systemUser.role as systemUser_role," +
+                        "lead.id as lead_id," +
+                        "lead.name as lead_name," +
+                        "lead.phone as lead_phone," +
+                        "lead.address as lead_address " +
+                        "FROM Meeting " +
+                        "JOIN Agent ON (agent.id = meeting.agentId) " +
+                        "JOIN Campaign ON (campaign.id = agent.campaignId) " +
+                        "JOIN Session ON (session.id = meeting.sessionId) " +
+                        "JOIN SystemUser ON (systemUser.id = session.systemUserId) " +
+                        "JOIN Lead ON (lead.id = session.leadId)";
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
@@ -44,7 +78,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "INSERT INTO Meeting (meeting_date, meeting_type, meeting_status, meeting_agentId, meeting_sessionId) VALUES (@date, @type, @status, @agentId, @sessionId)";
+                    cmd.CommandText = "INSERT INTO Meeting (date, type, status, agentId, sessionId) VALUES (@date, @type, @status, @agentId, @sessionId)";
                     cmd.Parameters.AddWithValue("@date", entity.Date);
                     cmd.Parameters.AddWithValue("@type", entity.Type);
                     cmd.Parameters.AddWithValue("@status", entity.Status);
@@ -62,7 +96,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "DELETE FROM Meeting WHERE meeting_id = @id";
+                    cmd.CommandText = "DELETE FROM Meeting WHERE id = @id";
                     cmd.Parameters.AddWithValue("@id", id);
                     cmd.ExecuteNonQuery();
                 }
@@ -78,17 +112,49 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM Meeting " +
-                        "JOIN Agent ON (agent_id = meeting_agentId) " +
-                        "JOIN Lead ON (lead_id = meeting_leadId) " +
-                        "WHERE meeting_id = @id";
+                    cmd.CommandText = "SELECT meeting.id as meeting_id," +
+                        "meeting.date as meeting_date," +
+                        "meeting.type as meeting_type," +
+                        "meeting.status as meeting_status," +
+                        "meeting.agentId as meeting_agentId," +
+                        "meeting.sessionId as meeting_sessionId," +
+                        "agent.id as agent_id," +
+                        "agent.name as agent_name," +
+                        "agent.email as agent_email," +
+                        "agent.phone as agent_phone," +
+                        "agent.campaignId as agent_campaignId," +
+                        "campaign.id as campaign_id," +
+                        "campaign.name as campaign_name," +
+                        "campaign.description as campaign_description," +
+                        "session.id as session_id," +
+                        "session.start as session_start," +
+                        "session.end as session_end," +
+                        "session.systemUserId as session_systemUserId," +
+                        "session.leadId as session_leadId," +
+                        "systemUser.id as systemUser_id," +
+                        "systemUser.name as systemUser_name," +
+                        "systemUser.email as systemUser_email," +
+                        "systemUser.phone as systemUser_phone," +
+                        "systemUser.password as systemUser_password," +
+                        "systemUser.role as systemUser_role," +
+                        "lead.id as lead_id," +
+                        "lead.name as lead_name," +
+                        "lead.phone as lead_phone," +
+                        "lead.address as lead_address " +
+                        "FROM Meeting " +
+                        "JOIN Agent ON (agent.id = meeting.agentId) " +
+                        "JOIN Campaign ON (campaign.id = agent.campaignId) " +
+                        "JOIN Session ON (session.id = meeting.sessionId) " +
+                        "JOIN SystemUser ON (systemUser.id = session.systemUserId) " +
+                        "JOIN Lead ON (lead.id = session.leadId) " +
+                        "WHERE meeting.id = @id"; 
                     cmd.Parameters.AddWithValue("@id", id);
                     
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
                         {
-                            temp = buildObject(reader);
+                            temp = BuildObject(reader);
                         }
                     }
                 }
@@ -104,7 +170,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "UPDATE Meeting SET(meeting_date = @date, meeting_type = @type, meeting_status = @status, meeting_agentId = @agentId, meeting_sessionId = @sessionId) where meeting_id = @id";
+                    cmd.CommandText = "UPDATE Meeting SET(date = @date, type = @type, status = @status, agentId = @agentId, sessionId = @sessionId) where id = @id";
                     cmd.Parameters.AddWithValue("@date", entity.Date);
                     cmd.Parameters.AddWithValue("@type", entity.Type);
                     cmd.Parameters.AddWithValue("@status", entity.Status);
@@ -116,7 +182,7 @@ namespace DataAccesLayer
             }
         }
 
-        internal static Meeting buildObject(SqlDataReader reader)
+        internal static Meeting BuildObject(SqlDataReader reader)
         {
             return new Meeting(
                 reader.GetInt32(reader.GetOrdinal("meeting_id")),
@@ -134,7 +200,7 @@ namespace DataAccesLayer
 
             while(reader.Read())
             {
-                temp.Add(buildObject(reader));
+                temp.Add(BuildObject(reader));
             }
 
             return temp;

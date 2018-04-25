@@ -22,7 +22,11 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM Lead";
+                    cmd.CommandText = "SELECT id as lead_id," +
+                        "name as lead_name," +
+                        "phone as lead_phone," +
+                        "address as lead_address " +
+                        "FROM Lead";
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
@@ -44,7 +48,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "INSERT INTO Lead (lead_name, lead_phone, lead_address) VALUES (@name, @phone, @address)";
+                    cmd.CommandText = "INSERT INTO Lead (name, phone, address) VALUES (@name, @phone, @address)";
                     cmd.Parameters.AddWithValue("@name", entity.Name);
                     cmd.Parameters.AddWithValue("@phone", entity.Phone);
                     cmd.Parameters.AddWithValue("@address", entity.Address);
@@ -60,7 +64,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "DELETE FROM Lead WHERE lead_id = @id";
+                    cmd.CommandText = "DELETE FROM Lead WHERE id = @id";
                     cmd.Parameters.AddWithValue("@id", id);
                     cmd.ExecuteNonQuery();
                 }
@@ -76,7 +80,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM Lead WHERE lead_id = @id";
+                    cmd.CommandText = "SELECT * FROM Lead WHERE id = @id";
                     cmd.Parameters.AddWithValue("@id", id);
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
@@ -99,7 +103,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "UPDATE Lead SET(lead_name = @name, lead_phone = @phone, lead_address = @address) WHERE lead_id = @id";
+                    cmd.CommandText = "UPDATE Lead SET(name = @name, phone = @phone, address = @address) WHERE id = @id";
                     cmd.Parameters.AddWithValue("@name", entity.Name);
                     cmd.Parameters.AddWithValue("@phone", entity.Phone);
                     cmd.Parameters.AddWithValue("@address", entity.Address);
