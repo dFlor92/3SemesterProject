@@ -4,6 +4,7 @@ using System.Linq;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
+using Core;
 using NobiService;
 
 namespace Host
@@ -29,6 +30,14 @@ namespace Host
             {
                 host.Value.Open();
             }
+
+            ServiceHost action = null;
+            // TEST THIS FUCKING SQL SHIT
+            AgentService agentService = new AgentService();
+            Agent tempAgent = agentService.Read(1);
+
+            
+
 
             // Wait for user action
             Console.WriteLine("\nPress any key to terminate all services..");

@@ -22,7 +22,24 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM Session";
+                    cmd.CommandText = "SELECT session.id as session_id," +
+                         "session.start as session_start," +
+                        "session.end as session_end," +
+                        "session.systemUserId as session_systemUserId," +
+                        "session.leadId as session_leadId," +
+                        "systemUser.id as systemUser_id," +
+                        "systemUser.name as systemUser_name," +
+                        "systemUser.email as systemUser_email," +
+                        "systemUser.phone as systemUser_phone," +
+                        "systemUser.password as systemUser_password," +
+                        "systemUser.role as systemUser_role," +
+                        "lead.id as lead_id," +
+                        "lead.name as lead_name," +
+                        "lead.phone as lead_phone," +
+                        "lead.address as lead_address " +
+                        "FROM Session " +
+                        "JOIN SystemUser ON (systemUser.id = session.systemUserId) " +
+                        "JOIN Lead ON (lead.id = session.leadId)";
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
@@ -44,7 +61,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "INSERT INTO Session (session_date, session_duration, session_systemUserId, session_leadId) VALUES (@date, @duration, @systemUserId, @leadId)";
+                    cmd.CommandText = "INSERT INTO Session (date, duration, systemUserId, leadId) VALUES (@date, @duration, @systemUserId, @leadId)";
                     cmd.Parameters.AddWithValue("@name", entity.Date);
                     cmd.Parameters.AddWithValue("@description", entity.Duration);
                     cmd.Parameters.AddWithValue("@systemUserId", entity.SystemUser.Id);
@@ -63,7 +80,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "DELETE FROM Session WHERE session_id = @id";
+                    cmd.CommandText = "DELETE FROM Session WHERE id = @id";
                     cmd.Parameters.AddWithValue("@id", id);
                     cmd.ExecuteNonQuery();
                 }
@@ -79,7 +96,25 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM Session WHERE session_id = @id";
+                    cmd.CommandText = "SELECT session.id as session_id," +
+                         "session.start as session_start," +
+                        "session.end as session_end," +
+                        "session.systemUserId as session_systemUserId," +
+                        "session.leadId as session_leadId," +
+                        "systemUser.id as systemUser_id," +
+                        "systemUser.name as systemUser_name," +
+                        "systemUser.email as systemUser_email," +
+                        "systemUser.phone as systemUser_phone," +
+                        "systemUser.password as systemUser_password," +
+                        "systemUser.role as systemUser_role," +
+                        "lead.id as lead_id," +
+                        "lead.name as lead_name," +
+                        "lead.phone as lead_phone," +
+                        "lead.address as lead_address " +
+                        "FROM Session " +
+                        "JOIN SystemUser ON (systemUser.id = session.systemUserId) " +
+                        "JOIN Lead ON (lead.id = session.leadId) " +
+                        "WHERE session.id = @id";
                     cmd.Parameters.AddWithValue("@id", id);
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
@@ -102,7 +137,7 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "UPDATE Session SET(session_date = @date, session_duration = @duration, session_systemUserId = @systemUserId, leadId = @leadId) WHERE session_id = @id";
+                    cmd.CommandText = "UPDATE Session SET(date = @date, duration = @duration, systemUserId = @systemUserId, leadId = @leadId) WHERE id = @id";
                     cmd.Parameters.AddWithValue("@name", entity.Date);
                     cmd.Parameters.AddWithValue("@description", entity.Duration);
                     cmd.Parameters.AddWithValue("@systemUserId", entity.SystemUser.Id);

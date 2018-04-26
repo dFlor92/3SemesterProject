@@ -3,8 +3,9 @@
     "",
     "\\App",
     "\\App\\BusinessLogic",
-    "\\App\\Core"
+    "\\App\\Core",
+    "\\App\\DataAccesLayer"
   ],
-  "SelectedNode": "\\App\\BusinessLogic\\SystemUserController.cs",
+  "SelectedNode": "\\App\\DataAccesLayer\\DBCampaign.cs",
   "PreviewInSolutionExplorer": false
 }

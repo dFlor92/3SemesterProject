@@ -52,6 +52,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{829A48D6-FD17-4DE6-B9D2-91586C7747AA}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NobiService\NobiService.csproj">
       <Project>{f48c68bb-067e-4d3d-898d-2106c0b4f0fb}</Project>
       <Name>NobiService</Name>

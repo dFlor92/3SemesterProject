@@ -24,7 +24,6 @@ namespace WebClient.Controllers
         // GET: Agent/Details/5
         public ActionResult Details(int id)
         {
-    
             Agent agent = client.Read(id);
             System.Diagnostics.Debug.WriteLine("HALOHALOAHLAJDS");
             return View(agent);
