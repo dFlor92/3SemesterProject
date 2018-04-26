@@ -6,11 +6,31 @@
 
 @using (Html.BeginForm("Create", "Agent"))
 {
-    @Html.TextBox("name");
-    @Html.TextBox("phone");
-    @Html.TextBox("email");
-    @Html.DropDownList()
 
-    <input type="submit" />
+   <fieldset>
+       <legend>Opret agent</legend>
+
+       <div>
+           @Html.Label("Name")
+       </div>
+       <div>
+           @Html.Editor("txtName")
+       </div>
+       <div>
+           @Html.Label("Phone")
+       </div>
+       <div>
+           @Html.Editor("txtPhone")
+       </div>
+       <div>
+           @Html.Label("Campaign")
+       </div>
+       <div>
+
+       </div>
+       <br />
+
+       <input type="submit" value="Save agent" />
+   </fieldset>
 }
 
