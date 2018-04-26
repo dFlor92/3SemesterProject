@@ -8,26 +8,32 @@ using Core;
 
 namespace BusinessLogic
 {
-    public class MeetingController : ICRUD<Meeting>
+    public class MeetingController : IDatabaseCRUD<Meeting>
     {
+        private DBMeeting db = new DBMeeting();
+        public IEnumerable<Meeting> All()
+        {
+            return db.All();
+        }
+
         public void Create(Meeting entity)
         {
-            throw new NotImplementedException();
+            db.Create(entity);
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            db.Delete(id);
         }
 
         public Meeting Read(int id)
         {
-            throw new NotImplementedException();
+           return db.Read(id);
         }
 
         public void Update(Meeting entity)
         {
-            throw new NotImplementedException();
+            db.Update(entity);
         }
     }
 }

@@ -8,28 +8,33 @@ using Core;
 
 namespace BusinessLogic
 {
-    public class CampaignController : ICRUD<Campaign>
+    public class CampaignController : IDatabaseCRUD<Campaign>
     {
-        DBCampaign dbCampaign = new DBCampaign();
+        private DBCampaign db = new DBCampaign();
+
+        public IEnumerable<Campaign> All()
+        {
+            return db.All();
+        }
 
         public void Create(Campaign entity)
         {
-            dbCampaign.Create(entity);
+            db.Create(entity);
         }
 
         public void Delete(int id)
         {
-            dbCampaign.Delete(id);
+            db.Delete(id);
         }
 
         public Campaign Read(int id)
         {
-            return dbCampaign.Read(id);
+            return db.Read(id);
         }
 
         public void Update(Campaign entity)
         {
-            dbCampaign.Update(entity);
+            db.Update(entity);
         }
     }
 }

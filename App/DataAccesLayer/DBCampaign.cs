@@ -9,9 +9,36 @@ using System.Threading.Tasks;
 
 namespace DataAccesLayer
 {
-    public class DBCampaign : ICRUD<Campaign>
+    public class DBCampaign : IDatabaseCRUD<Campaign>
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["MSSQL"].ConnectionString;
+
+        public IEnumerable<Campaign> All()
+        {
+            IEnumerable<Campaign> temp = null;
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT campaign.id as campaign_id," +
+                        "campaign.name as campaign_name," +
+                        "campaign.description as campaign_description " +
+                        "FROM Campaign";
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            temp = BuildObjects(reader);
+                        }
+                    }
+                }
+            }
+
+            return temp;
+        }
 
         public void Create(Campaign entity)
         {
@@ -51,18 +78,18 @@ namespace DataAccesLayer
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM Campaign WHERE id = @id";
+                    cmd.CommandText = "SELECT campaign.id as campaign_id," +
+                        "campaign.name as campaign_name," +
+                        "campaign.description as campaign_description " +
+                        "FROM Campaign " +
+                        "WHERE id = @id"; 
                     cmd.Parameters.AddWithValue("@id", id);
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
                         {
-                            temp = new Campaign(
-                                        reader.GetInt32(0),
-                                        reader.GetString(1),
-                                        reader.GetString(2)
-                                    );
+                            temp = BuildObject(reader);
                         }
                     }
                 }
@@ -85,6 +112,27 @@ namespace DataAccesLayer
                     cmd.ExecuteNonQuery();
                 }
             }
+        }
+
+        internal static Campaign BuildObject(SqlDataReader reader)
+        {
+            return new Campaign(
+                reader.GetInt32(reader.GetOrdinal("campaign_id")),
+                reader.GetString(reader.GetOrdinal("campaign_name")),
+                reader.GetString(reader.GetOrdinal("campaign_description"))
+            );
+        }
+
+        internal static IEnumerable<Campaign> BuildObjects(SqlDataReader reader)
+        {
+            List<Campaign> temp = new List<Campaign>();
+
+            while (reader.Read())
+            {
+                temp.Add(BuildObject(reader));
+            }
+
+            return temp;
         }
     }
 }

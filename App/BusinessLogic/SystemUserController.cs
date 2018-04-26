@@ -8,27 +8,33 @@ using Core;
 
 namespace BusinessLogic
 {
-    public class SystemUserController : ICRUD<SystemUser>
+    public class SystemUserController : IDatabaseCRUD<SystemUser>
     {
+        private DBSystemUser db = new DBSystemUser();
+        public IEnumerable<SystemUser> All()
+        {
+            return db.All();
+        }
+
         public void Create(SystemUser entity)
         {
-            throw new NotImplementedException();
+            db.Create(entity);
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            db.Delete(id);
         }
 
         public SystemUser Read(int id)
         {
-            throw new NotImplementedException();
+            return db.Read(id);
             
         }
 
         public void Update(SystemUser entity)
         {
-            throw new NotImplementedException();
+            db.Update(entity);
         }
     }
 }

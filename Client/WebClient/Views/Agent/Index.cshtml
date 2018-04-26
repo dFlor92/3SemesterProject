@@ -1,0 +1,19 @@
+﻿@using WebClient.Models
+@model AgentList
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+<ul>
+    @foreach (var m in Model.Agents)
+    {
+        <li>@m.Name</li>
+        <li>@m.Email</li>
+        <li>@m.Phone</li>
+        <li>@m.Campaign.Name</li>
+
+    }
+</ul>
+

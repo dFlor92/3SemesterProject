@@ -14,6 +14,7 @@ namespace NobiWinClient
         [STAThread]
         static void Main()
         {
+            System.Net.ServicePointManager.ServerCertificateValidationCallback = (obj, certificate, chain, errors) => true;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

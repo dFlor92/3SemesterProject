@@ -1,20 +1,36 @@
-﻿using System;
+﻿using Core;
+using System;
+using System.Runtime.Serialization;
 
-public class Session
-{
-    public int Id { get; set; }
-    public DateTime Date { get; set; }
-    public TimeSpan Duration { get; set; }
-
-	public Session(DateTime date, TimeSpan duration)
-	{
-        this.Date = date;
-        this.Duration = duration;
-	}
-    public Session(int id, DateTime date, TimeSpan duration)
+namespace Core
+{ 
+    [DataContract]
+    public class Session
     {
-        this.Id = id;
-        this.Date = date;
-        this.Duration = duration;
+        [DataMember]
+        public int Id { get; set; }
+
+        [DataMember]
+        public DateTime Start { get; set; }
+
+        [DataMember]
+        public DateTime End { get; set; }
+
+        public TimeSpan Duration { get { return End - Start; } set { } }
+
+        [DataMember]
+        public SystemUser SystemUser { get; set; }
+
+        [DataMember]
+        public Lead Lead { get; set; }
+        
+        public Session(int id, DateTime start, DateTime end, SystemUser systemUser, Lead lead)
+        {
+            this.Id = id;
+            this.Start = start;
+            this.End = end;
+            this.SystemUser = SystemUser;
+            this.Lead = lead;
+        }
     }
 }

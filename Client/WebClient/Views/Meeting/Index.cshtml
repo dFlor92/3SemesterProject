@@ -1,0 +1,23 @@
+﻿@using WebClient.Models
+@model MeetingList
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<ul>
+    @foreach (var m in Model.Meetings)
+    {
+        <li>@m.Date</li>
+        <li>@m.Session.Lead.Phone</li>
+        <li>@m.Session.Lead.Name</li>
+        <li>@m.Session.Lead.Address</li>
+        <li>@m.Type</li>
+        <li>@m.Status</li>
+        <li>@m.Agent.Name</li>
+        <li>@m.Agent.Campaign.Name</li>
+        <li>@m.Session.SystemUser.Name</li>
+    }
+</ul>
+

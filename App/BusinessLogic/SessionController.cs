@@ -8,26 +8,32 @@ using Core;
 
 namespace BusinessLogic
 {
-    public class SessionController : ICRUD<Session>
+    public class SessionController : IDatabaseCRUD<Session>
     {
+        private DBSession db = new DBSession();
+        public IEnumerable<Session> All()
+        {
+            return db.All();
+        }
+
         public void Create(Session entity)
         {
-            throw new NotImplementedException();
+            db.Create(entity);
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            db.Delete(id);
         }
 
         public Session Read(int id)
         {
-            throw new NotImplementedException();
+            return db.Read(id);
         }
 
         public void Update(Session entity)
         {
-            throw new NotImplementedException();
+            db.Update(entity);
         }
     }
 }

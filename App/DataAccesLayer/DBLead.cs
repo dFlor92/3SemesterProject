@@ -9,9 +9,37 @@ using System.Threading.Tasks;
 
 namespace DataAccesLayer
 {
-    public class DBLead : ICRUD<Lead>
+    public class DBLead : IDatabaseCRUD<Lead>
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["MSSQL"].ConnectionString;
+
+        public IEnumerable<Lead> All()
+        {
+            IEnumerable<Lead> temp = null;
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT id as lead_id," +
+                        "name as lead_name," +
+                        "phone as lead_phone," +
+                        "address as lead_address " +
+                        "FROM Lead";
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            temp = BuildObjects(reader);
+                        }
+                    }
+                }
+            }
+
+            return temp;
+        }
 
         public void Create(Lead entity)
         {
@@ -59,12 +87,7 @@ namespace DataAccesLayer
                     {
                         if (reader.Read())
                         {
-                            temp = new Lead(
-                                reader.GetInt32(0),
-                                reader.GetString(1),
-                                reader.GetString(2),
-                                reader.GetString(3)
-                            );
+                            temp = BuildObject(reader);
                         }
                     }
                 }
@@ -88,6 +111,28 @@ namespace DataAccesLayer
                     cmd.ExecuteNonQuery();
                 }
             }
+        }
+
+        internal static Lead BuildObject(SqlDataReader reader)
+        {
+            return new Lead(
+                reader.GetInt32(reader.GetOrdinal("lead_id")),
+                reader.GetString(reader.GetOrdinal("lead_name")),
+                reader.GetString(reader.GetOrdinal("lead_phone")),
+                reader.GetString(reader.GetOrdinal("lead_address"))
+            );
+        }
+
+        internal static IEnumerable<Lead> BuildObjects(SqlDataReader reader)
+        {
+            List<Lead> temp = new List<Lead>();
+
+            while (reader.Read())
+            {
+                temp.Add(BuildObject(reader));
+            }
+
+            return temp;
         }
     }
 }

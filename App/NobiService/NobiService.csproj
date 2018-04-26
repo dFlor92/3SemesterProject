@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F6026A26-DB8B-4860-AEDA-85D7E5220411}</ProjectGuid>
+    <ProjectGuid>{F48C68BB-067E-4D3D-898D-2106C0B4F0FB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NobiService</RootNamespace>
@@ -55,9 +55,20 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IService.cs" />
+    <Compile Include="CampaignService.cs" />
+    <Compile Include="IAgentService.cs" />
+    <Compile Include="ICampaignService.cs" />
+    <Compile Include="ILeadService.cs" />
+    <Compile Include="IMeetingService.cs" />
+    <Compile Include="ISessionService.cs" />
+    <Compile Include="ISystemUserService.cs" />
+    <Compile Include="LeadService.cs" />
+    <Compile Include="LoginValidator.cs" />
+    <Compile Include="MeetingService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service.cs" />
+    <Compile Include="AgentService.cs" />
+    <Compile Include="SessionService.cs" />
+    <Compile Include="SystemUserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
@@ -72,6 +83,14 @@
       <Project>{2D7F89C3-D51A-451C-99EA-D350B2C43AD3}</Project>
       <Name>DataAccesLayer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

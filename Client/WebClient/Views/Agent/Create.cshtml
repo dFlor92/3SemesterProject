@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Create", "Agent"))
+{
+    @Html.TextBox("name");
+    @Html.TextBox("phone");
+    @Html.TextBox("email");
+    @Html.DropDownList()
+
+    <input type="submit" />
+}
+

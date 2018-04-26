@@ -1,0 +1,21 @@
+﻿@using WebClient.Models
+@model SessionList
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<ul>
+    @foreach (var s in Model.Sessions)
+    {
+        <li>@s.Start</li>
+        <li>@s.End</li>
+        <li>@s.End.Subtract(s.Start).TotalMinutes</li>
+        <li>@s.SystemUser.Name</li>
+        <li>@s.Lead.Name</li>
+        <li>@s.Lead.Phone</li>
+        <li>@s.Lead.Address</li>
+    }
+</ul>
+
