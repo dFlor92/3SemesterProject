@@ -13,6 +13,12 @@
   <wsdl:message name="ILeadService_All_OutputMessage">
     <wsdl:part name="parameters" element="tns:AllResponse" />
   </wsdl:message>
+  <wsdl:message name="ILeadService_AllUncalledLeads_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllUncalledLeads" />
+  </wsdl:message>
+  <wsdl:message name="ILeadService_AllUncalledLeads_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllUncalledLeadsResponse" />
+  </wsdl:message>
   <wsdl:message name="ILeadService_Create_InputMessage">
     <wsdl:part name="parameters" element="tns:Create" />
   </wsdl:message>
@@ -42,6 +48,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ILeadService/All" message="tns:ILeadService_All_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ILeadService/AllResponse" message="tns:ILeadService_All_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="AllUncalledLeads">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadService/AllUncalledLeads" message="tns:ILeadService_AllUncalledLeads_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadService/AllUncalledLeadsResponse" message="tns:ILeadService_AllUncalledLeads_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="Create">
       <wsdl:input wsaw:Action="http://tempuri.org/ILeadService/Create" message="tns:ILeadService_Create_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ILeadService/CreateResponse" message="tns:ILeadService_Create_OutputMessage" />
@@ -63,6 +73,15 @@
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="All">
       <soap:operation soapAction="http://tempuri.org/ILeadService/All" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllUncalledLeads">
+      <soap:operation soapAction="http://tempuri.org/ILeadService/AllUncalledLeads" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

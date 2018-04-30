@@ -36,7 +36,9 @@ namespace DataAccesLayer
                         "lead.id as lead_id," +
                         "lead.name as lead_name," +
                         "lead.phone as lead_phone," +
-                        "lead.address as lead_address " +
+                        "lead.address as lead_address, " +
+                        "lead.status as lead_status, " +
+                        "lead.comment as lead_comment " +
                         "FROM Session " +
                         "JOIN SystemUser ON (systemUser.id = session.systemUserId) " +
                         "JOIN Lead ON (lead.id = session.leadId)";
@@ -110,7 +112,9 @@ namespace DataAccesLayer
                         "lead.id as lead_id," +
                         "lead.name as lead_name," +
                         "lead.phone as lead_phone," +
-                        "lead.address as lead_address " +
+                        "lead.address as lead_address, " +
+                        "lead.status as lead_status, " +
+                        "lead.comment as lead_comment " +
                         "FROM Session " +
                         "JOIN SystemUser ON (systemUser.id = session.systemUserId) " +
                         "JOIN Lead ON (lead.id = session.leadId) " +

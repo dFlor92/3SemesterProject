@@ -44,28 +44,28 @@
             this.agentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dmaa02171065555DataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.agentBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.agentBindingSource8 = new System.Windows.Forms.BindingSource(this.components);
             this.agentBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
             this.agentBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
-            this.agentBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.agentBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.agentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.agentBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.iAgentServiceChannelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.agentBindingSource7 = new System.Windows.Forms.BindingSource(this.components);
             this.agentBindingSource9 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dmaa02171065555DataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource4)).BeginInit();
@@ -195,46 +195,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(668, 494);
             this.dataGridView1.TabIndex = 16;
-            // 
-            // agentBindingSource8
-            // 
-            this.agentBindingSource8.DataSource = typeof(NobiWinClient.AgentService.Agent);
-            // 
-            // agentBindingSource6
-            // 
-            this.agentBindingSource6.DataSource = typeof(NobiWinClient.AgentService.Agent);
-            // 
-            // agentBindingSource5
-            // 
-            this.agentBindingSource5.DataSource = typeof(NobiWinClient.AgentService.Agent);
-            // 
-            // agentBindingSource3
-            // 
-            this.agentBindingSource3.DataSource = typeof(NobiWinClient.AgentService.Agent);
-            // 
-            // agentBindingSource2
-            // 
-            this.agentBindingSource2.DataSource = typeof(NobiWinClient.AgentService.Agent);
-            // 
-            // agentBindingSource1
-            // 
-            this.agentBindingSource1.DataSource = typeof(NobiWinClient.AgentService.Agent);
-            // 
-            // agentBindingSource4
-            // 
-            this.agentBindingSource4.DataSource = typeof(NobiWinClient.AgentService.Agent);
-            // 
-            // iAgentServiceChannelBindingSource
-            // 
-            this.iAgentServiceChannelBindingSource.DataSource = typeof(NobiWinClient.AgentService.IAgentServiceChannel);
-            // 
-            // agentBindingSource7
-            // 
-            this.agentBindingSource7.DataSource = typeof(NobiWinClient.AgentService.Agent);
-            // 
-            // agentBindingSource9
-            // 
-            this.agentBindingSource9.DataSource = typeof(NobiWinClient.AgentService.Agent);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -266,6 +227,46 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Phone";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
+            // agentBindingSource3
+            // 
+            this.agentBindingSource3.DataSource = typeof(NobiWinClient.AgentService.Agent);
+            // 
+            // agentBindingSource8
+            // 
+            this.agentBindingSource8.DataSource = typeof(NobiWinClient.AgentService.Agent);
+            // 
+            // agentBindingSource6
+            // 
+            this.agentBindingSource6.DataSource = typeof(NobiWinClient.AgentService.Agent);
+            // 
+            // agentBindingSource5
+            // 
+            this.agentBindingSource5.DataSource = typeof(NobiWinClient.AgentService.Agent);
+            // 
+            // agentBindingSource2
+            // 
+            this.agentBindingSource2.DataSource = typeof(NobiWinClient.AgentService.Agent);
+            // 
+            // agentBindingSource1
+            // 
+            this.agentBindingSource1.DataSource = typeof(NobiWinClient.AgentService.Agent);
+            // 
+            // agentBindingSource4
+            // 
+            this.agentBindingSource4.DataSource = typeof(NobiWinClient.AgentService.Agent);
+            // 
+            // iAgentServiceChannelBindingSource
+            // 
+            this.iAgentServiceChannelBindingSource.DataSource = typeof(NobiWinClient.AgentService.IAgentServiceChannel);
+            // 
+            // agentBindingSource7
+            // 
+            this.agentBindingSource7.DataSource = typeof(NobiWinClient.AgentService.Agent);
+            // 
+            // agentBindingSource9
+            // 
+            this.agentBindingSource9.DataSource = typeof(NobiWinClient.AgentService.Agent);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -291,10 +292,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dmaa02171065555DataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agentBindingSource4)).EndInit();

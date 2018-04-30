@@ -1,0 +1,38 @@
+﻿@using WebClient.LeadService;
+@model List<Lead>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<table class="table table-default table-striped">
+    <thead>
+        <th>#</th>
+        <th>Navn</th>
+        <th>Telefon</th>
+        <th>Addresse</th>
+        <th>Status</th>
+        <th></th>
+    </thead>
+    <tbody>
+@foreach (var item in Model)
+{   
+        <a href="lort">
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Phone</td>
+                <td>@item.Address</td>
+                <td>@item.Status</td>
+                <td>
+                    <a href="/Lead/Details/@item.Id">
+                        <button class="btn btn-success btn-xs">Show</button>
+                    </a>
+                </td>
+            </tr>
+        </a>
+}
+    </tbody>
+</table>
+

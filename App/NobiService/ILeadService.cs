@@ -14,6 +14,8 @@ namespace NobiService
         [OperationContract]
         IEnumerable<Lead> All();
         [OperationContract]
+        IEnumerable<Lead> AllUncalledLeads();
+        [OperationContract]
         void Create(Lead entity);
         [OperationContract]
         Lead Read(int id);

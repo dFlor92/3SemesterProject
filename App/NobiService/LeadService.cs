@@ -13,10 +13,14 @@ namespace NobiService
     public class LeadService : ILeadService
     {
         private LeadController controller = new LeadController();
-        
+
         public IEnumerable<Lead> All()
         {
             return controller.All();
+        }
+        public IEnumerable<Lead> AllUncalledLeads()
+        {
+            return controller.AllUncalledLeads();
         }
 
         public void Create(Lead entity)

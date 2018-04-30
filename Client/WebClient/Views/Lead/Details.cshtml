@@ -1,0 +1,16 @@
+﻿@using WebClient.LeadService
+@model Lead
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+<ul>
+    <li>ID: @Model.Id</li>
+    <li>Navn: @Model.Name</li>
+    <li>Telefon: @Model.Phone</li>
+    <li>Adresse: @Model.Address</li>
+    <li>Status: @Model.Status</li>
+</ul>
+

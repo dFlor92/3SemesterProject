@@ -34,6 +34,9 @@ namespace WebClient.LeadService {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string PhoneField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private WebClient.LeadService.LeadStatus StatusField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -96,6 +99,19 @@ namespace WebClient.LeadService {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public WebClient.LeadService.LeadStatus Status {
+            get {
+                return this.StatusField;
+            }
+            set {
+                if ((this.StatusField.Equals(value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -106,15 +122,32 @@ namespace WebClient.LeadService {
         }
     }
     
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="LeadStatus", Namespace="http://schemas.datacontract.org/2004/07/Core")]
+    public enum LeadStatus : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        NotCalled = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Called = 1,
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="LeadService.ILeadService")]
     public interface ILeadService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILeadService/All", ReplyAction="http://tempuri.org/ILeadService/AllResponse")]
-        WebClient.LeadService.Lead[] All();
+        System.Collections.Generic.List<WebClient.LeadService.Lead> All();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILeadService/All", ReplyAction="http://tempuri.org/ILeadService/AllResponse")]
-        System.Threading.Tasks.Task<WebClient.LeadService.Lead[]> AllAsync();
+        System.Threading.Tasks.Task<System.Collections.Generic.List<WebClient.LeadService.Lead>> AllAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILeadService/AllUncalledLeads", ReplyAction="http://tempuri.org/ILeadService/AllUncalledLeadsResponse")]
+        System.Collections.Generic.List<WebClient.LeadService.Lead> AllUncalledLeads();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILeadService/AllUncalledLeads", ReplyAction="http://tempuri.org/ILeadService/AllUncalledLeadsResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<WebClient.LeadService.Lead>> AllUncalledLeadsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILeadService/Create", ReplyAction="http://tempuri.org/ILeadService/CreateResponse")]
         void Create(WebClient.LeadService.Lead entity);
@@ -168,12 +201,20 @@ namespace WebClient.LeadService {
                 base(binding, remoteAddress) {
         }
         
-        public WebClient.LeadService.Lead[] All() {
+        public System.Collections.Generic.List<WebClient.LeadService.Lead> All() {
             return base.Channel.All();
         }
         
-        public System.Threading.Tasks.Task<WebClient.LeadService.Lead[]> AllAsync() {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<WebClient.LeadService.Lead>> AllAsync() {
             return base.Channel.AllAsync();
+        }
+        
+        public System.Collections.Generic.List<WebClient.LeadService.Lead> AllUncalledLeads() {
+            return base.Channel.AllUncalledLeads();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<WebClient.LeadService.Lead>> AllUncalledLeadsAsync() {
+            return base.Channel.AllUncalledLeadsAsync();
         }
         
         public void Create(WebClient.LeadService.Lead entity) {

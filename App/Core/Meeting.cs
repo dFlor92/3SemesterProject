@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 
 namespace Core
 {
-    public enum Status { Accepted, Delayed, Cancelled, Scheduled, Completed };
+    public enum MeetingStatus { Accepted, Delayed, Cancelled, Scheduled, Completed };
     public enum Type { Regular, Half, Phone, Risk };
     [DataContract]
     public class Meeting
@@ -15,7 +15,7 @@ namespace Core
         public DateTime Date { get; set; }
 
         [DataMember]
-        public Status Status { get; set; }
+        public MeetingStatus Status { get; set; }
 
         [DataMember]
         public Type Type { get; set; }
@@ -26,7 +26,7 @@ namespace Core
         [DataMember]
         public Session Session { get; set; }
 
-        public Meeting(int id, DateTime date, Type type, Status status, Agent agent, Session session)
+        public Meeting(int id, DateTime date, Type type, MeetingStatus status, Agent agent, Session session)
         {
             this.Id = id;
             this.Date = date;

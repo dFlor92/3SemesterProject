@@ -204,10 +204,10 @@ namespace NobiWinClient.AgentService {
     public interface IAgentService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgentService/All", ReplyAction="http://tempuri.org/IAgentService/AllResponse")]
-        NobiWinClient.AgentService.Agent[] All();
+        System.Collections.Generic.List<NobiWinClient.AgentService.Agent> All();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgentService/All", ReplyAction="http://tempuri.org/IAgentService/AllResponse")]
-        System.Threading.Tasks.Task<NobiWinClient.AgentService.Agent[]> AllAsync();
+        System.Threading.Tasks.Task<System.Collections.Generic.List<NobiWinClient.AgentService.Agent>> AllAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAgentService/Create", ReplyAction="http://tempuri.org/IAgentService/CreateResponse")]
         void Create(NobiWinClient.AgentService.Agent entity);
@@ -261,11 +261,11 @@ namespace NobiWinClient.AgentService {
                 base(binding, remoteAddress) {
         }
         
-        public NobiWinClient.AgentService.Agent[] All() {
+        public System.Collections.Generic.List<NobiWinClient.AgentService.Agent> All() {
             return base.Channel.All();
         }
         
-        public System.Threading.Tasks.Task<NobiWinClient.AgentService.Agent[]> AllAsync() {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<NobiWinClient.AgentService.Agent>> AllAsync() {
             return base.Channel.AllAsync();
         }
         

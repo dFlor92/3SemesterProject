@@ -18,6 +18,11 @@ namespace BusinessLogic
             return db.All();
         }
 
+        public IEnumerable<Lead> AllUncalledLeads()
+        {
+            return db.AllUncalledLeads();
+        }
+
         public void Create(Lead entity)
         {
             db.Create(entity);

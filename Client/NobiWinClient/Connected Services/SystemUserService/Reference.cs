@@ -32,6 +32,12 @@ namespace NobiWinClient.SystemUserService {
         private string NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PhoneField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private NobiWinClient.SystemUserService.Role RoleField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -84,6 +90,32 @@ namespace NobiWinClient.SystemUserService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Phone {
+            get {
+                return this.PhoneField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PhoneField, value) != true)) {
+                    this.PhoneField = value;
+                    this.RaisePropertyChanged("Phone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public NobiWinClient.SystemUserService.Role Role {
             get {
                 return this.RoleField;
@@ -122,10 +154,10 @@ namespace NobiWinClient.SystemUserService {
     public interface ISystemUserService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISystemUserService/All", ReplyAction="http://tempuri.org/ISystemUserService/AllResponse")]
-        NobiWinClient.SystemUserService.SystemUser[] All();
+        System.Collections.Generic.List<NobiWinClient.SystemUserService.SystemUser> All();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISystemUserService/All", ReplyAction="http://tempuri.org/ISystemUserService/AllResponse")]
-        System.Threading.Tasks.Task<NobiWinClient.SystemUserService.SystemUser[]> AllAsync();
+        System.Threading.Tasks.Task<System.Collections.Generic.List<NobiWinClient.SystemUserService.SystemUser>> AllAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISystemUserService/Create", ReplyAction="http://tempuri.org/ISystemUserService/CreateResponse")]
         void Create(NobiWinClient.SystemUserService.SystemUser entity);
@@ -179,11 +211,11 @@ namespace NobiWinClient.SystemUserService {
                 base(binding, remoteAddress) {
         }
         
-        public NobiWinClient.SystemUserService.SystemUser[] All() {
+        public System.Collections.Generic.List<NobiWinClient.SystemUserService.SystemUser> All() {
             return base.Channel.All();
         }
         
-        public System.Threading.Tasks.Task<NobiWinClient.SystemUserService.SystemUser[]> AllAsync() {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<NobiWinClient.SystemUserService.SystemUser>> AllAsync() {
             return base.Channel.AllAsync();
         }
         

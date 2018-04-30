@@ -13,10 +13,22 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="AllUncalledLeads">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllUncalledLeadsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Core" minOccurs="0" name="AllUncalledLeadsResult" nillable="true" type="q2:ArrayOfLead" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Create">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Core" minOccurs="0" name="entity" nillable="true" type="q2:Lead" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Core" minOccurs="0" name="entity" nillable="true" type="q3:Lead" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -35,14 +47,14 @@
   <xs:element name="ReadResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Core" minOccurs="0" name="ReadResult" nillable="true" type="q3:Lead" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Core" minOccurs="0" name="ReadResult" nillable="true" type="q4:Lead" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Update">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Core" minOccurs="0" name="entity" nillable="true" type="q4:Lead" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Core" minOccurs="0" name="entity" nillable="true" type="q5:Lead" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

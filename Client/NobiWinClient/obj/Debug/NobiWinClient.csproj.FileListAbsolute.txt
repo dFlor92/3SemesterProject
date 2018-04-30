@@ -45,3 +45,5 @@ C:\Users\1065490\Source\Repos\3SemesterProject\Client\NobiWinClient\obj\Debug\No
 C:\Users\1065490\Source\Repos\3SemesterProject\Client\NobiWinClient\obj\Debug\NobiWinClient.csproj.CoreCompileInputs.cache
 C:\Users\1065490\Source\Repos\3SemesterProject\Client\NobiWinClient\obj\Debug\NobiWinClient.exe
 C:\Users\1065490\Source\Repos\3SemesterProject\Client\NobiWinClient\obj\Debug\NobiWinClient.pdb
+C:\Users\Watten\source\repos\3SemesterProject\Client\NobiWinClient\obj\Debug\NobiWinClient.testLeadList.resources
+C:\Users\Watten\source\repos\3SemesterProject\Client\NobiWinClient\obj\Debug\NobiWinClient.LeadDetails.resources

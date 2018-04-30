@@ -95,10 +95,10 @@ namespace NobiWinClient.CampaignService {
     public interface ICampaignService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICampaignService/All", ReplyAction="http://tempuri.org/ICampaignService/AllResponse")]
-        NobiWinClient.CampaignService.Campaign[] All();
+        System.Collections.Generic.List<NobiWinClient.CampaignService.Campaign> All();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICampaignService/All", ReplyAction="http://tempuri.org/ICampaignService/AllResponse")]
-        System.Threading.Tasks.Task<NobiWinClient.CampaignService.Campaign[]> AllAsync();
+        System.Threading.Tasks.Task<System.Collections.Generic.List<NobiWinClient.CampaignService.Campaign>> AllAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICampaignService/Create", ReplyAction="http://tempuri.org/ICampaignService/CreateResponse")]
         void Create(NobiWinClient.CampaignService.Campaign entity);
@@ -152,11 +152,11 @@ namespace NobiWinClient.CampaignService {
                 base(binding, remoteAddress) {
         }
         
-        public NobiWinClient.CampaignService.Campaign[] All() {
+        public System.Collections.Generic.List<NobiWinClient.CampaignService.Campaign> All() {
             return base.Channel.All();
         }
         
-        public System.Threading.Tasks.Task<NobiWinClient.CampaignService.Campaign[]> AllAsync() {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<NobiWinClient.CampaignService.Campaign>> AllAsync() {
             return base.Channel.AllAsync();
         }
         

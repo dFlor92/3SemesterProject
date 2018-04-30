@@ -12,7 +12,15 @@
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="tns:LeadStatus" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Lead" nillable="true" type="tns:Lead" />
+  <xs:simpleType name="LeadStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotCalled" />
+      <xs:enumeration value="Called" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="LeadStatus" nillable="true" type="tns:LeadStatus" />
 </xs:schema>

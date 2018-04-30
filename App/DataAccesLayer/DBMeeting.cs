@@ -50,7 +50,9 @@ namespace DataAccesLayer
                         "lead.id as lead_id," +
                         "lead.name as lead_name," +
                         "lead.phone as lead_phone," +
-                        "lead.address as lead_address " +
+                        "lead.address as lead_address, " +
+                        "lead.status as lead_status, " +
+                        "lead.comment as lead_comment " +
                         "FROM Meeting " +
                         "JOIN Agent ON (agent.id = meeting.agentId) " +
                         "JOIN Campaign ON (campaign.id = agent.campaignId) " +
@@ -140,7 +142,9 @@ namespace DataAccesLayer
                         "lead.id as lead_id," +
                         "lead.name as lead_name," +
                         "lead.phone as lead_phone," +
-                        "lead.address as lead_address " +
+                        "lead.address as lead_address, " +
+                        "lead.status as lead_status, " +
+                        "lead.comment as lead_comment " +
                         "FROM Meeting " +
                         "JOIN Agent ON (agent.id = meeting.agentId) " +
                         "JOIN Campaign ON (campaign.id = agent.campaignId) " +
@@ -188,7 +192,7 @@ namespace DataAccesLayer
                 reader.GetInt32(reader.GetOrdinal("meeting_id")),
                 reader.GetDateTime(reader.GetOrdinal("meeting_date")),
                 (Core.Type)Enum.Parse(typeof(Core.Type), reader.GetInt32(reader.GetOrdinal("meeting_type")).ToString()), // This is an int that needs to be an enum so we cast it to a role
-                (Core.Status)Enum.Parse(typeof(Core.Status), reader.GetInt32(reader.GetOrdinal("meeting_status")).ToString()), // This is an int that needs to be an enum so we cast it to a role
+                (Core.MeetingStatus)Enum.Parse(typeof(Core.MeetingStatus), reader.GetInt32(reader.GetOrdinal("meeting_status")).ToString()), // This is an int that needs to be an enum so we cast it to a role
                 DBAgent.BuildObject(reader),
                 DBSession.BuildObject(reader)
             );

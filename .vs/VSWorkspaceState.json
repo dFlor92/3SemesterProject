@@ -4,8 +4,10 @@
     "\\App",
     "\\App\\BusinessLogic",
     "\\App\\Core",
-    "\\App\\DataAccesLayer"
+    "\\App\\DataAccesLayer",
+    "\\App\\ServiceHost",
+    "\\App\\ServiceHost\\Properties"
   ],
-  "SelectedNode": "\\App\\DataAccesLayer\\DBCampaign.cs",
+  "SelectedNode": "\\App\\ServiceHost\\Properties\\AssemblyInfo.cs",
   "PreviewInSolutionExplorer": false
 }
