@@ -9,7 +9,7 @@ using Core;
 
 namespace DataAccesLayer
 {
-    public class DBSystemUser : IDatabaseCRUD<SystemUser>
+    public class DBSystemUser : IDatabaseCRUD<SystemUser>, IAccountManager
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["MSSQL"].ConnectionString;
 
@@ -56,7 +56,7 @@ namespace DataAccesLayer
                     cmd.Parameters.AddWithValue("@role", entity.Role);
                     cmd.ExecuteNonQuery();
 
-                    
+
                 }
             }
         }
@@ -147,6 +147,48 @@ namespace DataAccesLayer
 
             return temp;
         }
+
+        public void Register(string username, string password)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Login(string email, string password)
+        {
+            throw new NotImplementedException();
+        }
+        //SystemUser temp = null;
+
+        //using (SqlConnection conn = new SqlConnection(connectionString))
+        //{
+        //    conn.Open();
+        //    using (SqlCommand cmd = conn.CreateCommand())
+        //    {
+        //        cmd.CommandText = "SELECT email as systemUser_email," +
+        //            "password as systemUser_password," +
+        //            "salt as systemUser_salt" +
+        //            "FROM SystemUser " +
+        //            "WHERE email = @email";
+
+        //        using (SqlDataReader reader = cmd.ExecuteReader())
+        //        {
+        //            if (reader.HasRows)
+        //            {
+        //                temp = BuildObject(reader);
+        //            }
+        //        }
+        //        if (temp != null && temp.Password == HashingHelper.HashPassword(password, temp.Salt))
+        //        {
+        //            return true;
+        //        }
+        //        else
+        //        {
+        //            return false;
+        //        }
+        //    }
+        //}
     }
-}
+    }
+
+
 

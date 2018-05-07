@@ -19,8 +19,11 @@ namespace Core
         [DataMember]
         public string Phone { get; set; }
 
+        //Maybe rename to HashedPassword?
         [DataMember]
         public string Password { get; set; }
+        [DataMember]
+        public string Salt { get; set; }
 
         [DataMember]
         public Role Role { get; set; }
@@ -31,6 +34,14 @@ namespace Core
             this.Name = name;
             this.Email = email;
             this.Role = role;
+
+        }
+
+        public SystemUser(string email, string password, string salt)
+        {
+            this.Email = email;
+            this.Password = password;
+            this.Salt = salt;
 
         }
     }
